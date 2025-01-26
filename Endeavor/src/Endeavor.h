@@ -1,0 +1,8 @@
+#pragma once
+
+
+#include "Endeavor/Application.h"
+
+//---Èë¿Úµã------------------------
+#include "Endeavor/EntryPoint.h"
+//---------------------------------
