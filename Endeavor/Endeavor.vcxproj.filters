@@ -4,6 +4,9 @@
     <Filter Include="Endeavor">
       <UniqueIdentifier>{D984962D-C551-F138-EE6A-DFE0DA9626C7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Endeavor\Events">
+      <UniqueIdentifier>{9D22DD49-09AE-4A0E-12BF-CD027EC9A60E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Endeavor.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Endeavor\EntryPoint.h">
       <Filter>Endeavor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Events\ApplicationEvent.h">
+      <Filter>Endeavor\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Events\Event.h">
+      <Filter>Endeavor\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Events\KeyEvent.h">
+      <Filter>Endeavor\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Events\MouseEvent.h">
+      <Filter>Endeavor\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Log.h">
       <Filter>Endeavor</Filter>
