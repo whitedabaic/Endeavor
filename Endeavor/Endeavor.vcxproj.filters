@@ -27,9 +27,15 @@
     <ClInclude Include="src\Endeavor\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

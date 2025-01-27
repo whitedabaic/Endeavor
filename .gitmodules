@@ -1,0 +1,3 @@
+[submodule "Endeavor/vendor/spdlog"]
+	path = Endeavor/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
