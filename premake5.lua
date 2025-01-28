@@ -62,14 +62,17 @@ project "Endeavor"
 
 		filter "configurations:Debug"
 			defines "ED_DEBUG"
+			buildoptions "/MDd;/utf-8"
 			symbols "On"
 
 		filter "configurations:Release"
 			defines "ED_RELEASE"
+			buildoptions "/MD;/utf-8"
 			optimize "On"
 
 		filter "configurations:Dist"
 			defines "ED_DIST"
+			buildoptions "/MD;/utf-8"
 			optimize "On"
 
 project "Sandbox"
@@ -109,12 +112,15 @@ project "Sandbox"
 
 		filter "configurations:Debug"
 			defines "ED_DEBUG"
+			buildoptions "/MDd;/utf-8"
 			symbols "On"
 
 		filter "configurations:Release"
 			defines "ED_RELEASE"
+			buildoptions "/MD;/utf-8"
 			optimize "On"
 
 		filter "configurations:Dist"
 			defines "ED_DIST"
+			buildoptions "/MD;/utf-8"
 			optimize "On"

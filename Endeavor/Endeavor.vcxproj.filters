@@ -37,6 +37,12 @@
     <ClInclude Include="src\Endeavor\Events\MouseEvent.h">
       <Filter>Endeavor\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Layer.h">
+      <Filter>Endeavor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\LayerStack.h">
+      <Filter>Endeavor</Filter>
+    </ClInclude>
     <ClInclude Include="src\Endeavor\Log.h">
       <Filter>Endeavor</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Application.cpp">
+      <Filter>Endeavor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Layer.cpp">
+      <Filter>Endeavor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\LayerStack.cpp">
       <Filter>Endeavor</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Log.cpp">
