@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Endeavor/vendor/GLFW/include"
+IncludeDir["Glad"] = "Endeavor/vendor/Glad/include"
 
 include "Endeavor/vendor/GLFW"
+include "Endeavor/vendor/Glad"
 
 project "Endeavor"
 	location "Endeavor"
@@ -37,12 +39,14 @@ project "Endeavor"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "Endeavor"
 		defines
 		{
 			"ED_PLATFORM_WINDOWS",
-			"ED_BUILD_DLL"
+			"ED_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		postbuildcommands
 		{
@@ -62,17 +67,20 @@ project "Endeavor"
 
 		filter "configurations:Debug"
 			defines "ED_DEBUG"
-			buildoptions "/MDd;/utf-8"
+			runtime "Debug"
+			buildoptions "/utf-8"
 			symbols "On"
 
 		filter "configurations:Release"
 			defines "ED_RELEASE"
-			buildoptions "/MD;/utf-8"
+			runtime "Release"
+			buildoptions "/utf-8"
 			optimize "On"
 
 		filter "configurations:Dist"
 			defines "ED_DIST"
-			buildoptions "/MD;/utf-8"
+			runtime "Release"
+			buildoptions "/utf-8"
 			optimize "On"
 
 project "Sandbox"
@@ -112,15 +120,18 @@ project "Sandbox"
 
 		filter "configurations:Debug"
 			defines "ED_DEBUG"
-			buildoptions "/MDd;/utf-8"
+			runtime "Debug"
+			buildoptions "/utf-8"
 			symbols "On"
 
 		filter "configurations:Release"
 			defines "ED_RELEASE"
-			buildoptions "/MD;/utf-8"
+			runtime "Release"
+			buildoptions "/utf-8"
 			optimize "On"
 
 		filter "configurations:Dist"
 			defines "ED_DIST"
-			buildoptions "/MD;/utf-8"
+			runtime "Release"
+			buildoptions "/utf-8"
 			optimize "On"
