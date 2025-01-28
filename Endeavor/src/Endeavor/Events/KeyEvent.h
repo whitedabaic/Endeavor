@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Endeavor {
 
 	class ENDEAVOR_API KeyEvent : public Event

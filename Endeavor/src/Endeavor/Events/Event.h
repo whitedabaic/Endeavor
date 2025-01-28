@@ -1,9 +1,7 @@
 #pragma once
+#include "hzpch.h"
 
 #include "Endeavor/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Endeavor {
 

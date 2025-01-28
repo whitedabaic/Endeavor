@@ -1,3 +1,6 @@
 [submodule "Endeavor/vendor/spdlog"]
 	path = Endeavor/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "Endeavor/vendor/GLFW"]
+	path = Endeavor/vendor/GLFW
+	url = https://github.com/TheCherno/glfw.git

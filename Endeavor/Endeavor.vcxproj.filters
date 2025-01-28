@@ -7,6 +7,12 @@
     <Filter Include="Endeavor\Events">
       <UniqueIdentifier>{9D22DD49-09AE-4A0E-12BF-CD027EC9A60E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Endeavor.h" />
@@ -34,6 +40,13 @@
     <ClInclude Include="src\Endeavor\Log.h">
       <Filter>Endeavor</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Window.h">
+      <Filter>Endeavor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Application.cpp">
@@ -42,5 +55,9 @@
     <ClCompile Include="src\Endeavor\Log.cpp">
       <Filter>Endeavor</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>
 </Project>

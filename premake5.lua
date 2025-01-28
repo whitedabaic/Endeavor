@@ -10,6 +10,12 @@ workspace "Endeavor"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Endeavor/vendor/GLFW/include"
+
+include "Endeavor/vendor/GLFW"
+
 project "Endeavor"
 	location "Endeavor"
 	kind "SharedLib"
@@ -17,6 +23,9 @@ project "Endeavor"
 
 	targetdir("bin/" .. outputdir .. "/%{prj.name}")
 	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "hzpch.h"
+	pchsource "Endeavor/src/hzpch.cpp"
 
 	files
 	{
@@ -27,7 +36,14 @@ project "Endeavor"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
