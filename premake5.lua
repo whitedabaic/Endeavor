@@ -1,5 +1,6 @@
 workspace "Endeavor"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -16,14 +17,18 @@ IncludeDir["GLFW"] = "Endeavor/vendor/GLFW/include"
 IncludeDir["Glad"] = "Endeavor/vendor/Glad/include"
 IncludeDir["Imgui"] = "Endeavor/vendor/imgui"
 
-include "Endeavor/vendor/GLFW"
-include "Endeavor/vendor/Glad"
-include "Endeavor/vendor/imgui"
+group "Dependencies"
+	include "Endeavor/vendor/GLFW"
+	include "Endeavor/vendor/Glad"
+	include "Endeavor/vendor/imgui"
+
+group ""
 
 project "Endeavor"
 	location "Endeavor"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir("bin/" .. outputdir .. "/%{prj.name}")
 	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -56,7 +61,6 @@ project "Endeavor"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 		defines
 		{
@@ -66,7 +70,7 @@ project "Endeavor"
 		}
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 		filter "configurations:Debug"
@@ -91,6 +95,7 @@ project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir("bin/" .. outputdir .. "/%{prj.name}")
 	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -114,7 +119,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines

@@ -10,6 +10,10 @@
 	#error Endeavor only supports Windows!
 #endif
 
+#ifdef ED_DEBUG
+	#define ED_ENABLE_ASSERTS
+#endif
+
 #ifdef ED_ENABLE_ASSERTS
 	#define ED_ASSERT(x, ...) { if(!(x)) { ED_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define ED_CORE_ASSERT(x, ...) { if(!(x)) { ED_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
