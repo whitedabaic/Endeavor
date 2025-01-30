@@ -165,9 +165,11 @@
     <ClInclude Include="src\Endeavor\Events\MouseEvent.h" />
     <ClInclude Include="src\Endeavor\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Endeavor\Input.h" />
+    <ClInclude Include="src\Endeavor\KeyCodes.h" />
     <ClInclude Include="src\Endeavor\Layer.h" />
     <ClInclude Include="src\Endeavor\LayerStack.h" />
     <ClInclude Include="src\Endeavor\Log.h" />
+    <ClInclude Include="src\Endeavor\MouseButtonCodes.h" />
     <ClInclude Include="src\Endeavor\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />

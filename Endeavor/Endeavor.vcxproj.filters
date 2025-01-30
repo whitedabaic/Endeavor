@@ -74,6 +74,8 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\edpch.h" />
+    <ClInclude Include="src\Endeavor\KeyCodes.h" />
+    <ClInclude Include="src\Endeavor\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Application.cpp">
