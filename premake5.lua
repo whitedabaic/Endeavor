@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Endeavor/vendor/GLFW/include"
 IncludeDir["Glad"] = "Endeavor/vendor/Glad/include"
 IncludeDir["Imgui"] = "Endeavor/vendor/imgui"
+IncludeDir["glm"] = "Endeavor/vendor/glm"
 
 group "Dependencies"
 	include "Endeavor/vendor/GLFW"
@@ -39,7 +40,9 @@ project "Endeavor"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -48,7 +51,8 @@ project "Endeavor"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.Imgui}"
+		"%{IncludeDir.Imgui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -109,7 +113,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Endeavor/vendor/spdlog/include",
-		"Endeavor/src"
+		"Endeavor/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
