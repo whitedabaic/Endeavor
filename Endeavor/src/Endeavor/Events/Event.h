@@ -1,5 +1,5 @@
 #pragma once
-#include "hzpch.h"
+#include "edpch.h"
 
 #include "Endeavor/Core.h"
 

@@ -33,8 +33,8 @@ project "Endeavor"
 	targetdir("bin/" .. outputdir .. "/%{prj.name}")
 	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "hzpch.h"
-	pchsource "Endeavor/src/hzpch.cpp"
+	pchheader "edpch.h"
+	pchsource "Endeavor/src/edpch.cpp"
 
 	files
 	{
