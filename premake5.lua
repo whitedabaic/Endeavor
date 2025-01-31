@@ -114,6 +114,7 @@ project "Sandbox"
 	{
 		"Endeavor/vendor/spdlog/include",
 		"Endeavor/src",
+		"Endeavor/vendor",
 		"%{IncludeDir.glm}"
 	}
 

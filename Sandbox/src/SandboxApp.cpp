@@ -1,5 +1,7 @@
 #include <Endeavor.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public Endeavor::Layer
 {
 public:
@@ -30,7 +32,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Endeavor::ImGuiLayer());
 	}
 
 	~Sandbox()
