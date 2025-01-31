@@ -15,6 +15,10 @@ namespace Endeavor {
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		ED_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		ED_CORE_INFO("  Vendor: {}", std::string(reinterpret_cast<const char*>(glGetString(GL_VENDOR))));
+		ED_CORE_INFO("  Renderer: {}", std::string(reinterpret_cast<const char*>(glGetString(GL_RENDERER))));
+		ED_CORE_INFO("  Version: {}", std::string(reinterpret_cast<const char*>(glGetString(GL_VERSION))));
 	}
 	void OpenGLContext::SwapBuffers()
 	{
