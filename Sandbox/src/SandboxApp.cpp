@@ -15,6 +15,14 @@ public:
 		if (Endeavor::Input::IsKeyPressed(ED_KEY_TAB))
 			ED_TRACE("Tab key is pressed (poll)!");
 	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World!");
+		ImGui::End();
+	}
+
 	void OnEvent(Endeavor::Event& event) override
 	{
 		if (event.GetEventType() == Endeavor::EventType::KeyPressed)

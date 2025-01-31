@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef  ED_PLATFORM_WINDOWS
+#if ED_DYNAMIC_LINK
 	#ifdef ED_BUILD_DLL
 		#define ENDEAVOR_API __declspec(dllexport)
 	#else
 		#define ENDEAVOR_API __declspec(dllimport)
 	#endif
+#else
+	#define ENDEAVOR_API
+#endif
 #else
 	#error Endeavor only supports Windows!
 #endif
