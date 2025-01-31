@@ -161,7 +161,9 @@
     <ClInclude Include="src\Endeavor\LayerStack.h" />
     <ClInclude Include="src\Endeavor\Log.h" />
     <ClInclude Include="src\Endeavor\MouseButtonCodes.h" />
+    <ClInclude Include="src\Endeavor\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Endeavor\Window.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\edpch.h" />
@@ -591,6 +593,7 @@
     <ClCompile Include="src\Endeavor\Layer.cpp" />
     <ClCompile Include="src\Endeavor\LayerStack.cpp" />
     <ClCompile Include="src\Endeavor\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\edpch.cpp">

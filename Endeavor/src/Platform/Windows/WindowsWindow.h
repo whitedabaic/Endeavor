@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Endeavor/Window.h"
+#include "Endeavor/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
 
@@ -27,6 +28,7 @@ namespace Endeavor {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
