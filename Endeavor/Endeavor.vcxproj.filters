@@ -1356,6 +1356,9 @@
     <ClInclude Include="src\Endeavor\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Endeavor\Renderer\Shader.h" />
+    <ClInclude Include="src\Endeavor\Renderer\Buffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Endeavor\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Application.cpp">
@@ -1387,5 +1390,8 @@
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Endeavor\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Endeavor\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>
