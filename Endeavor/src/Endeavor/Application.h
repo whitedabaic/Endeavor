@@ -13,6 +13,8 @@
 #include "Endeavor/Renderer/Buffer.h"
 #include "Endeavor/Renderer/VertexArray.h"
 
+#include "Endeavor/Renderer/OrthographicCamera.h"
+
 namespace Endeavor {
 	class ENDEAVOR_API Application
 	{
@@ -43,6 +45,7 @@ namespace Endeavor {
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
 
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};

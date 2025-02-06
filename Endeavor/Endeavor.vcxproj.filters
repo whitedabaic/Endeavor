@@ -1364,6 +1364,7 @@
     <ClInclude Include="src\Endeavor\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Endeavor\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
+    <ClInclude Include="src\Endeavor\Renderer\OrthographicCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Application.cpp">
@@ -1403,5 +1404,6 @@
     <ClCompile Include="src\Endeavor\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="src\Endeavor\Renderer\OrthographicCamera.cpp" />
   </ItemGroup>
 </Project>
