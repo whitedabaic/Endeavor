@@ -149,6 +149,7 @@
     <ClInclude Include="src\Endeavor.h" />
     <ClInclude Include="src\Endeavor\Application.h" />
     <ClInclude Include="src\Endeavor\Core.h" />
+    <ClInclude Include="src\Endeavor\Core\Timestep.h" />
     <ClInclude Include="src\Endeavor\EntryPoint.h" />
     <ClInclude Include="src\Endeavor\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Endeavor\Events\Event.h" />

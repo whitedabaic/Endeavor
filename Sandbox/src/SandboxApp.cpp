@@ -120,22 +120,22 @@ public:
 
 		m_BlueShader.reset(new Endeavor::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
 	}
-	void OnUpdate() override
+	void OnUpdate(Endeavor::Timestep ts) override
 	{
 		if (Endeavor::Input::IsKeyPressed(ED_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed;
+			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
 		else if (Endeavor::Input::IsKeyPressed(ED_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed;
+			m_CameraPosition.x += m_CameraMoveSpeed * ts;
 
 		if (Endeavor::Input::IsKeyPressed(ED_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed;
+			m_CameraPosition.y += m_CameraMoveSpeed * ts;
 		else if (Endeavor::Input::IsKeyPressed(ED_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed;
+			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 
 		if (Endeavor::Input::IsKeyPressed(ED_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 		if (Endeavor::Input::IsKeyPressed(ED_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed;
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
 
 		Endeavor::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Endeavor::RenderCommand::Clear();
@@ -172,10 +172,10 @@ private:
 
 	Endeavor::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 0.1f;
+	float m_CameraMoveSpeed = 5.0f;
 
 	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 2.0f;
+	float m_CameraRotationSpeed = 100.0f;
 
 };
 class Sandbox : public Endeavor::Application

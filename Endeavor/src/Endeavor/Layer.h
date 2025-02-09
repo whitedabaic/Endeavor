@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Endeavor/Core.h"
+#include "Endeavor/Core/Timestep.h"
 #include "Endeavor/Events/Event.h"
 
 namespace Endeavor
@@ -14,7 +15,7 @@ namespace Endeavor
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 

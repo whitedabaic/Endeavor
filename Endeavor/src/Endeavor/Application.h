@@ -7,6 +7,8 @@
 #include "Endeavor/Events/Event.h"
 #include "Endeavor/Events/ApplicationEvent.h"
 
+#include "Endeavor/Core/Timestep.h"
+
 #include "Endeavor/ImGui/ImGuiLayer.h"
 
 namespace Endeavor {
@@ -32,6 +34,8 @@ namespace Endeavor {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+		Timestep m_Timestep;
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
 	};
