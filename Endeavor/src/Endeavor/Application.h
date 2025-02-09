@@ -9,14 +9,8 @@
 
 #include "Endeavor/ImGui/ImGuiLayer.h"
 
-#include "Endeavor/Renderer/Shader.h"
-#include "Endeavor/Renderer/Buffer.h"
-#include "Endeavor/Renderer/VertexArray.h"
-
-#include "Endeavor/Renderer/OrthographicCamera.h"
-
 namespace Endeavor {
-	class ENDEAVOR_API Application
+	class Application
 	{
 	public:
 		Application();
