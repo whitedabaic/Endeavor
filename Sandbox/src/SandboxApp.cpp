@@ -1,8 +1,10 @@
 #include <Endeavor.h>
 
+#include "Platform/OpenGL/OpenGLShader.h"
 #include "imgui/imgui.h"
 
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class ExampleLayer : public Endeavor::Layer
 {
@@ -18,7 +20,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<Endeavor::VertexBuffer> vertexBuffer;
+		Endeavor::Ref<Endeavor::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Endeavor::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		Endeavor::BufferLayout layout = {
@@ -28,9 +30,9 @@ public:
 		vertexBuffer->SetLayout(layout);
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
-		//Éú³ÉË÷Òı»º³å²¢°ó¶¨
+		//ç”Ÿæˆç´¢å¼•ç¼“å†²å¹¶ç»‘å®š
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Endeavor::IndexBuffer> indexBuffer;
+		Endeavor::Ref<Endeavor::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Endeavor::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -43,7 +45,7 @@ public:
 			-0.5f,  0.5f, 0.0f
 		};
 
-		std::shared_ptr<Endeavor::VertexBuffer> squareVB;
+		Endeavor::Ref<Endeavor::VertexBuffer> squareVB;
 		squareVB.reset(Endeavor::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ Endeavor::ShaderDataType::Float3, "a_Position" }
@@ -51,7 +53,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Endeavor::IndexBuffer> squareIB;
+		Endeavor::Ref<Endeavor::IndexBuffer> squareIB;
 		squareIB.reset(Endeavor::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -90,7 +92,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(new Endeavor::Shader(vertexSrc, fragmentSrc));
+		m_Shader.reset(Endeavor::Shader::Create(vertexSrc, fragmentSrc));
 
 		std::string blueShaderVertexSrc = R"(
 			#version 330 core
@@ -116,15 +118,15 @@ public:
 
 			in vec3 v_Position;
 
-			uniform vec4 u_Color;
+			uniform vec3 u_Color;
 
 			void main()
 			{
-				color = u_Color;
+				color = vec4(u_Color, 1.0f);
 			}
 		)";
 
-		m_FlatColorShader.reset(new Endeavor::Shader(blueShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader.reset(Endeavor::Shader::Create(blueShaderVertexSrc, flatColorShaderFragmentSrc));
 	}
 	void OnUpdate(Endeavor::Timestep ts) override
 	{
@@ -153,11 +155,8 @@ public:
 
 		glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
-		glm::vec4 redColor(0.8f, 0.2f, 0.3f, 1.0f);
-		glm::vec4 blueColor(0.2f, 0.3f, 0.8f, 1.0f);
-
-		//Endeavor::MaterialRef material = new Endeavor::Material(m_FlatColorShader);
-		//material->Set("u_Color", redColor);
+		std::dynamic_pointer_cast<Endeavor::OpenGLShader>(m_FlatColorShader)->Bind();
+		std::dynamic_pointer_cast<Endeavor::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
 
 		for (int y = 0; y < 20; y++)
 		{
@@ -165,10 +164,6 @@ public:
 			{
 				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
 				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-				if (x % 2 == 0)
-					m_FlatColorShader->UploadUniformFloat4("u_Color", redColor);
-				else
-					m_FlatColorShader->UploadUniformFloat4("u_Color", blueColor);
 				Endeavor::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
 
 			}
@@ -183,7 +178,10 @@ public:
 
 	virtual void OnImGuiRender() override
 	{
+		ImGui::Begin("è®¾ç½®");
+		ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
 
+		ImGui::End();
 	}
 
 	void OnEvent(Endeavor::Event& event) override
@@ -192,11 +190,11 @@ public:
 	}
 
 private:
-	std::shared_ptr<Endeavor::Shader> m_Shader;
-	std::shared_ptr<Endeavor::VertexArray> m_VertexArray;
+	Endeavor::Ref<Endeavor::Shader> m_Shader;
+	Endeavor::Ref<Endeavor::VertexArray> m_VertexArray;
 
-	std::shared_ptr<Endeavor::Shader> m_FlatColorShader;
-	std::shared_ptr<Endeavor::VertexArray> m_SquareVA;
+	Endeavor::Ref<Endeavor::Shader> m_FlatColorShader;
+	Endeavor::Ref<Endeavor::VertexArray> m_SquareVA;
 
 	Endeavor::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
@@ -204,6 +202,8 @@ private:
 
 	float m_CameraRotation = 0.0f;
 	float m_CameraRotationSpeed = 100.0f;
+
+	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
 class Sandbox : public Endeavor::Application
 {
