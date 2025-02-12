@@ -93,7 +93,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(Endeavor::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = Endeavor::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 		std::string blueShaderVertexSrc = R"(
 			#version 330 core
@@ -127,15 +127,15 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset(Endeavor::Shader::Create(blueShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader = Endeavor::Shader::Create("FlatColor", blueShaderVertexSrc, flatColorShaderFragmentSrc);
 
-		m_TextureShader.reset(Endeavor::Shader::Create("assets/shaders/Texture.glsl"));
+		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 
 		m_Texture = Endeavor::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_ChernoLogoTexture = Endeavor::Texture2D::Create("assets/textures/ChernoLogo.png");
 
-		std::dynamic_pointer_cast<Endeavor::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<Endeavor::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<Endeavor::OpenGLShader>(textureShader)->Bind();
+		std::dynamic_pointer_cast<Endeavor::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
 	void OnUpdate(Endeavor::Timestep ts) override
 	{
@@ -178,10 +178,12 @@ public:
 			}
 		}
 
+		auto textureShader = m_ShaderLibrary.Get("Texture");
+
 		m_Texture->Bind();
-		Endeavor::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Endeavor::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 		m_ChernoLogoTexture->Bind();
-		Endeavor::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Endeavor::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		//Endeavor::Renderer::Submit(m_Shader, m_VertexArray);
 
@@ -204,10 +206,11 @@ public:
 	}
 
 private:
+	Endeavor::ShaderLibrary m_ShaderLibrary;
 	Endeavor::Ref<Endeavor::Shader> m_Shader;
 	Endeavor::Ref<Endeavor::VertexArray> m_VertexArray;
 
-	Endeavor::Ref<Endeavor::Shader> m_FlatColorShader, m_TextureShader;
+	Endeavor::Ref<Endeavor::Shader> m_FlatColorShader;
 	Endeavor::Ref<Endeavor::VertexArray> m_SquareVA;
 
 	Endeavor::Ref<Endeavor::Texture2D> m_Texture, m_ChernoLogoTexture;
