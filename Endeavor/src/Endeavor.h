@@ -25,7 +25,3 @@
 
 #include "Endeavor/Renderer/OrthographicCamera.h"
 //---------------------------------
-
-//---Èë¿Úµã------------------------
-#include "Endeavor/Core/EntryPoint.h"
-//---------------------------------
