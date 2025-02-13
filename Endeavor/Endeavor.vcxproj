@@ -162,6 +162,7 @@
     <ClInclude Include="src\Endeavor\LayerStack.h" />
     <ClInclude Include="src\Endeavor\Log.h" />
     <ClInclude Include="src\Endeavor\MouseButtonCodes.h" />
+    <ClInclude Include="src\Endeavor\OrthographicCameraController.h" />
     <ClInclude Include="src\Endeavor\Renderer\Buffer.h" />
     <ClInclude Include="src\Endeavor\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Endeavor\Renderer\OrthographicCamera.h" />
@@ -608,6 +609,7 @@
     <ClCompile Include="src\Endeavor\Layer.cpp" />
     <ClCompile Include="src\Endeavor\LayerStack.cpp" />
     <ClCompile Include="src\Endeavor\Log.cpp" />
+    <ClCompile Include="src\Endeavor\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\RenderCommand.cpp" />
