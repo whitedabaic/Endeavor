@@ -1,8 +1,8 @@
 #include "edpch.h"
 #include "OrthographicCameraController.h"
 
-#include "Endeavor/Input.h"
-#include "Endeavor/KeyCodes.h"
+#include "Endeavor/Core/Input.h"
+#include "Endeavor/Core/KeyCodes.h"
 
 namespace Endeavor {
 	OrthographicCameraController::OrthographicCameraController(float aspectRatio, bool rotation)

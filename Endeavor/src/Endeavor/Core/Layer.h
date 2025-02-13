@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Endeavor/Core.h"
+#include "Endeavor/Core/Core.h"
 #include "Endeavor/Core/Timestep.h"
 #include "Endeavor/Events/Event.h"
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Endeavor/Input.h"
+#include "Endeavor/Core/Input.h"
 
 namespace Endeavor
 {

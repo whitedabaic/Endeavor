@@ -1,7 +1,7 @@
 #include "edpch.h"
 #include "WindowsInput.h"
 
-#include "Endeavor/Application.h"
+#include "Endeavor/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Endeavor

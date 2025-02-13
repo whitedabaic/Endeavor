@@ -3,7 +3,7 @@
 #include "Core.h"
 
 #include "Window.h"
-#include "Endeavor/LayerStack.h"
+#include "Endeavor/Core/LayerStack.h"
 #include "Endeavor/Events/Event.h"
 #include "Endeavor/Events/ApplicationEvent.h"
 

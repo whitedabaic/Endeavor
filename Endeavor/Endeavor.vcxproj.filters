@@ -57,17 +57,38 @@
     <ClInclude Include="src\Endeavor.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Application.h">
-      <Filter>src\Endeavor</Filter>
+    <ClInclude Include="src\Endeavor\Core\Application.h">
+      <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Core.h">
-      <Filter>src\Endeavor</Filter>
+    <ClInclude Include="src\Endeavor\Core\Core.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\EntryPoint.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\Input.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\KeyCodes.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\Layer.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\LayerStack.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\Log.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\MouseButtonCodes.h">
+      <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Core\Timestep.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\EntryPoint.h">
-      <Filter>src\Endeavor</Filter>
+    <ClInclude Include="src\Endeavor\Core\Window.h">
+      <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Events\ApplicationEvent.h">
       <Filter>src\Endeavor\Events</Filter>
@@ -84,24 +105,6 @@
     <ClInclude Include="src\Endeavor\ImGui\ImGuiLayer.h">
       <Filter>src\Endeavor\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Input.h">
-      <Filter>src\Endeavor</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Endeavor\KeyCodes.h">
-      <Filter>src\Endeavor</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Endeavor\Layer.h">
-      <Filter>src\Endeavor</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Endeavor\LayerStack.h">
-      <Filter>src\Endeavor</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Endeavor\Log.h">
-      <Filter>src\Endeavor</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Endeavor\MouseButtonCodes.h">
-      <Filter>src\Endeavor</Filter>
-    </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Buffer.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
@@ -109,6 +112,9 @@
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\OrthographicCamera.h">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Renderer\OrthographicCameraController.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\RenderCommand.h">
@@ -129,9 +135,6 @@
     <ClInclude Include="src\Endeavor\Renderer\VertexArray.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Window.h">
-      <Filter>src\Endeavor</Filter>
-    </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
@@ -142,6 +145,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
@@ -1413,12 +1419,19 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
-    <ClInclude Include="src\Endeavor\OrthographicCameraController.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Endeavor\Application.cpp">
-      <Filter>src\Endeavor</Filter>
+    <ClCompile Include="src\Endeavor\Core\Application.cpp">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Core\Layer.cpp">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Core\LayerStack.cpp">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Core\Log.cpp">
+      <Filter>src\Endeavor\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\ImGui\ImGuiBuild.cpp">
       <Filter>src\Endeavor\ImGui</Filter>
@@ -1426,19 +1439,13 @@
     <ClCompile Include="src\Endeavor\ImGui\ImGuiLayer.cpp">
       <Filter>src\Endeavor\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\Endeavor\Layer.cpp">
-      <Filter>src\Endeavor</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Endeavor\LayerStack.cpp">
-      <Filter>src\Endeavor</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Endeavor\Log.cpp">
-      <Filter>src\Endeavor</Filter>
-    </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Buffer.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\OrthographicCamera.cpp">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Renderer\OrthographicCameraController.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\RenderCommand.cpp">
@@ -1471,6 +1478,9 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1486,7 +1496,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
-    <ClCompile Include="src\Endeavor\OrthographicCameraController.cpp" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Endeavor/Layer.h"
+#include "Endeavor/Core/Layer.h"
 
 #include "Endeavor/Events/ApplicationEvent.h"
 #include "Endeavor/Events/KeyEvent.h"

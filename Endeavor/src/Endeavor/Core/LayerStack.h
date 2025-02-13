@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Endeavor/Core.h"
+#include "Endeavor/Core/Core.h"
 #include "Layer.h"
 
 #include <vector>

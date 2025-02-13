@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Endeavor/Window.h"
+#include "Endeavor/Core/Window.h"
 #include "Endeavor/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

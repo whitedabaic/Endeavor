@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Endeavor/Log.h"
+#include "Endeavor/Core/Log.h"
 
 #ifdef ED_PLATFORM_WINDOWS
 	#include <Windows.h>

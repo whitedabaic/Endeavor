@@ -2,7 +2,7 @@
 
 #include "edpch.h"
 
-#include "Endeavor/Core.h"
+#include "Endeavor/Core/Core.h"
 #include "Endeavor/Events/Event.h"
 
 namespace Endeavor {

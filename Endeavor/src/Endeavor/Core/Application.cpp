@@ -1,7 +1,7 @@
 #include "edpch.h"
 #include "Application.h"
 
-#include "Endeavor/Log.h"
+#include "Endeavor/Core/Log.h"
 
 #include "Endeavor/Renderer/Renderer.h"
 

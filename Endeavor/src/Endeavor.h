@@ -1,16 +1,16 @@
 #pragma once
 
 
-#include "Endeavor/Application.h"
-#include "Endeavor/Layer.h"
-#include "Endeavor/Log.h"
+#include "Endeavor/Core/Application.h"
+#include "Endeavor/Core/Layer.h"
+#include "Endeavor/Core/Log.h"
 
 #include "Endeavor/Core/Timestep.h"
 
-#include "Endeavor/Input.h"
-#include "Endeavor/KeyCodes.h"
-#include "Endeavor/MouseButtonCodes.h"
-#include "Endeavor/OrthographicCameraController.h"
+#include "Endeavor/Core/Input.h"
+#include "Endeavor/Core/KeyCodes.h"
+#include "Endeavor/Core/MouseButtonCodes.h"
+#include "Endeavor/Renderer/OrthographicCameraController.h"
 
 #include "Endeavor/ImGui/ImGuiLayer.h"
 
@@ -27,5 +27,5 @@
 //---------------------------------
 
 //---Èë¿Úµã------------------------
-#include "Endeavor/EntryPoint.h"
+#include "Endeavor/Core/EntryPoint.h"
 //---------------------------------
