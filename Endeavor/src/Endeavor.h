@@ -16,6 +16,7 @@
 
 //---äÖÈ¾------------------------
 #include "Endeavor/Renderer/Renderer.h"
+#include "Endeavor/Renderer/Renderer2D.h"
 #include "Endeavor/Renderer/RenderCommand.h"
 
 #include "Endeavor/Renderer/Buffer.h"
