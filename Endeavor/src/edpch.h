@@ -15,6 +15,8 @@
 
 #include "Endeavor/Core/Log.h"
 
+#include "Endeavor/Debug/Instrumentor.h"
+
 #ifdef ED_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
