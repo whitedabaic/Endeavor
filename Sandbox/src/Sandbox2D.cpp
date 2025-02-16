@@ -11,22 +11,22 @@ Sandbox2D::Sandbox2D()
 
 void Sandbox2D::OnAttach()
 {
-	m_CheckboardTexture = Endeavor::Texture2D::Create("assets/textures/Checkerboard.png");
+	ED_PROFILE_FUNCTION();
 
+	m_CheckboardTexture = Endeavor::Texture2D::Create("assets/textures/Checkerboard.png");
 }
 
 void Sandbox2D::OnDetach()
 {
+	ED_PROFILE_FUNCTION();
+
 }
 
 void Sandbox2D::OnUpdate(Endeavor::Timestep ts)
 {
-	ED_PROFILE_FUNCTION("Sandbox2D::OnUpdate");
+	ED_PROFILE_FUNCTION();
 	//Update
-	{
-		ED_PROFILE_SCOPE("CameraController::OnUpdate");
-		m_CameraController.OnUpdate(ts);
-	}
+	m_CameraController.OnUpdate(ts);
 
 	//Renderer
 	{
