@@ -106,7 +106,7 @@ namespace Endeavor {
 		bool m_Stopped;
 	};
 }
-#define ED_PROFILE 1
+#define ED_PROFILE 0
 #if ED_PROFILE
 	#define ED_PROFILE_BEGIN_SESSION(name, filepath) ::Endeavor::Instrumentor::Get().BeginSession(name, filepath)
 	#define ED_PROFILE_END_SESSION() ::Endeavor::Instrumentor::Get().EndSession()
