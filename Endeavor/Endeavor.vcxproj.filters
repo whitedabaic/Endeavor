@@ -1421,6 +1421,7 @@
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Endeavor\Debug\Instrumentor.h" />
+    <ClInclude Include="src\Endeavor\Renderer\SubTexture2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Core\Application.cpp">
@@ -1499,5 +1500,6 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Renderer2D.cpp" />
+    <ClCompile Include="src\Endeavor\Renderer\SubTexture2D.cpp" />
   </ItemGroup>
 </Project>

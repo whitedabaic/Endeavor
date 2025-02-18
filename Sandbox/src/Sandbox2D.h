@@ -25,6 +25,7 @@ private:
 
 	Endeavor::Ref<Endeavor::Texture2D> m_CheckboardTexture;
 	Endeavor::Ref<Endeavor::Texture2D> m_SpriteSheet;
+	Endeavor::Ref<Endeavor::SubTexture2D> m_TextureStairs;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 

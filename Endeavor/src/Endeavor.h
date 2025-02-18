@@ -22,6 +22,7 @@
 #include "Endeavor/Renderer/Buffer.h"
 #include "Endeavor/Renderer/Shader.h"
 #include "Endeavor/Renderer/Texture.h"
+#include "Endeavor/Renderer/SubTexture2D.h"
 #include "Endeavor/Renderer/VertexArray.h"
 
 #include "Endeavor/Renderer/OrthographicCamera.h"
