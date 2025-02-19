@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Endeavor/Core/Base.h"
 
 #include "Endeavor/Core/Application.h"
 #include "Endeavor/Core/Layer.h"

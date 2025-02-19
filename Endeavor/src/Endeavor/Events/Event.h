@@ -1,7 +1,7 @@
 #pragma once
 #include "edpch.h"
 
-#include "Endeavor/Core/Core.h"
+#include "Endeavor/Core/Base.h"
 
 namespace Endeavor {
 

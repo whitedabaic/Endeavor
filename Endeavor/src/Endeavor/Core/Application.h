@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include "Endeavor/Core/Base.h"
 
 #include "Window.h"
 #include "Endeavor/Core/LayerStack.h"

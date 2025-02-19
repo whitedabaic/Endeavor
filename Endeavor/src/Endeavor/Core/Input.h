@@ -1,6 +1,8 @@
 #pragma once
 
-#include "Endeavor/Core/Core.h"
+#include "Endeavor/Core/Base.h"
+#include "Endeavor/Core/KeyCodes.h"
+#include "Endeavor/Core/MouseButtonCodes.h"
 
 namespace Endeavor {
 

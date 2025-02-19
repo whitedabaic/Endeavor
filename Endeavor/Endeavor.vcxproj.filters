@@ -60,7 +60,7 @@
     <ClInclude Include="src\Endeavor\Core\Application.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Core\Core.h">
+    <ClInclude Include="src\Endeavor\Core\Base.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Core\EntryPoint.h">

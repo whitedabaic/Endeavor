@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Endeavor/Core/Base.h"
+
 #ifdef ED_PLATFORM_WINDOWS
 
 extern Endeavor::Application* Endeavor::CreateApplication();

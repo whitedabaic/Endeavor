@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "Endeavor/Core/Core.h"
+#include "Endeavor/Core/Base.h"
 
 namespace Endeavor {
 

@@ -7,7 +7,7 @@
 
 #include "Input.h"
 
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 namespace Endeavor {
 
@@ -65,9 +65,9 @@ namespace Endeavor {
 		//ED_CORE_INFO("{0}", e.ToString());
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{
-			(*--it)->OnEvent(e);
 			if (e.Handled)
 				break;
+			(*--it)->OnEvent(e);
 		}
 	}
 

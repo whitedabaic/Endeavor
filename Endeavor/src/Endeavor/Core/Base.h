@@ -17,12 +17,22 @@
 #endif
 
 #ifdef ED_DEBUG
+	#if defined(ED_PLATFORM_WINDOWS)
+		#define ED_DEBUGBREAK() __debugbreak()
+	#elif defined(ED_PLATFORM_LINUX)
+		#include <signal.h>
+		#define ED_DEBUGBREAK() raise(SIGTRAP)
+	#else
+		#error "Platform doesn't support debugbreak yet!"
+	#endif
 	#define ED_ENABLE_ASSERTS
+#else
+	#define ED_DEBUGBREAK()
 #endif
 
 #ifdef ED_ENABLE_ASSERTS
-	#define ED_ASSERT(x, ...) { if(!(x)) { ED_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
-	#define ED_CORE_ASSERT(x, ...) { if(!(x)) { ED_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define ED_ASSERT(x, ...) { if(!(x)) { ED_ERROR("Assertion Failed: {0}", __VA_ARGS__); ED_DEBUGBREAK(); } }
+	#define ED_CORE_ASSERT(x, ...) { if(!(x)) { ED_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); ED_DEBUGBREAK(); } }
 #else
 	#define ED_ASSERT(x, ...)
 	#define ED_CORE_ASSERT(x, ...)
