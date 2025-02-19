@@ -1,7 +1,7 @@
 #include "edpch.h"
 #include "Buffer.h"
 
-#include "Renderer.h"
+#include "Endeavor/Renderer/Renderer.h"
 
 #include "Platform/OpenGL/OpenGLBuffer.h"
 

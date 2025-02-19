@@ -1422,6 +1422,8 @@
     <ClInclude Include="src\Endeavor\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Endeavor\Debug\Instrumentor.h" />
     <ClInclude Include="src\Endeavor\Renderer\SubTexture2D.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
+    <ClInclude Include="src\Endeavor\Renderer\Framebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Core\Application.cpp">
@@ -1501,5 +1503,7 @@
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\SubTexture2D.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
+    <ClCompile Include="src\Endeavor\Renderer\Framebuffer.cpp" />
   </ItemGroup>
 </Project>
