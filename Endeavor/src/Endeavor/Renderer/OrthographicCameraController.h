@@ -25,19 +25,19 @@ namespace Endeavor {
 		void OnUpdate(Timestep ts);
 		void OnEvent(Event& e);
 
+		void OnResize(float width, float height);
+
 		OrthographicCamera& GetCamera() { return m_Camera; }
 		const OrthographicCamera& GetCamera() const { return m_Camera; }
 
 		float GetZoomLevel() { return m_ZoomLevel; }
-		void SetZoomLevel(float level) { m_ZoomLevel = level; CalculateView(); }
+		void SetZoomLevel(float level) { m_ZoomLevel = level; }
 
 		const OrthographicCameraBounds& GetBounds() const { return m_Bounds; }
 	private:
 		bool OnMouseScrolled(MouseScrolledEvent& e);
 		bool OnWindowResized(WindowResizeEvent& e);
 	private:
-		void CalculateView();
-
 		float m_AspectRatio;
 		float m_ZoomLevel = 1.0;
 		OrthographicCameraBounds m_Bounds;
