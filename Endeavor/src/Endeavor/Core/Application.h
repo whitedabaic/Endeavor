@@ -15,7 +15,7 @@ namespace Endeavor {
 	class Application
 	{
 	public:
-		Application();
+		Application(const std::string& name = "Endeavor App");
 		virtual ~Application();
 
 		void Run();

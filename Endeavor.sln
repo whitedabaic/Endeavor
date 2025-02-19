@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "Endeavor\vendor\im
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Endeavor", "Endeavor\Endeavor.vcxproj", "{D984962D-C551-F138-EE6A-DFE0DA9626C7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Endeavor-Editor", "Endeavor-Editor\Endeavor-Editor.vcxproj", "{6D3AA5AE-D9C5-1273-E2D6-95674EE16E73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -50,6 +52,12 @@ Global
 		{D984962D-C551-F138-EE6A-DFE0DA9626C7}.Dist|x64.Build.0 = Dist|x64
 		{D984962D-C551-F138-EE6A-DFE0DA9626C7}.Release|x64.ActiveCfg = Release|x64
 		{D984962D-C551-F138-EE6A-DFE0DA9626C7}.Release|x64.Build.0 = Release|x64
+		{6D3AA5AE-D9C5-1273-E2D6-95674EE16E73}.Debug|x64.ActiveCfg = Debug|x64
+		{6D3AA5AE-D9C5-1273-E2D6-95674EE16E73}.Debug|x64.Build.0 = Debug|x64
+		{6D3AA5AE-D9C5-1273-E2D6-95674EE16E73}.Dist|x64.ActiveCfg = Dist|x64
+		{6D3AA5AE-D9C5-1273-E2D6-95674EE16E73}.Dist|x64.Build.0 = Dist|x64
+		{6D3AA5AE-D9C5-1273-E2D6-95674EE16E73}.Release|x64.ActiveCfg = Release|x64
+		{6D3AA5AE-D9C5-1273-E2D6-95674EE16E73}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

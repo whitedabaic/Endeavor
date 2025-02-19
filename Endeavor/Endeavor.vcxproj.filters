@@ -10,6 +10,9 @@
     <Filter Include="src\Endeavor\Core">
       <UniqueIdentifier>{280E2779-9424-250F-DD9B-B03049F1F596}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Endeavor\Debug">
+      <UniqueIdentifier>{462E159E-3212-D6F3-9B72-D0468775C075}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Endeavor\Events">
       <UniqueIdentifier>{B4494564-20AB-2272-A918-692415795931}</UniqueIdentifier>
     </Filter>
@@ -90,6 +93,9 @@
     <ClInclude Include="src\Endeavor\Core\Window.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Debug\Instrumentor.h">
+      <Filter>src\Endeavor\Debug</Filter>
+    </ClInclude>
     <ClInclude Include="src\Endeavor\Events\ApplicationEvent.h">
       <Filter>src\Endeavor\Events</Filter>
     </ClInclude>
@@ -108,6 +114,9 @@
     <ClInclude Include="src\Endeavor\Renderer\Buffer.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Renderer\Framebuffer.h">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\GraphicsContext.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
@@ -123,10 +132,16 @@
     <ClInclude Include="src\Endeavor\Renderer\Renderer.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Renderer\Renderer2D.h">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\RendererAPI.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Shader.h">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Renderer\SubTexture2D.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Texture.h">
@@ -139,6 +154,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
@@ -1419,11 +1437,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Renderer\Renderer2D.h" />
-    <ClInclude Include="src\Endeavor\Debug\Instrumentor.h" />
-    <ClInclude Include="src\Endeavor\Renderer\SubTexture2D.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
-    <ClInclude Include="src\Endeavor\Renderer\Framebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Core\Application.cpp">
@@ -1447,6 +1460,9 @@
     <ClCompile Include="src\Endeavor\Renderer\Buffer.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Endeavor\Renderer\Framebuffer.cpp">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\OrthographicCamera.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
@@ -1459,10 +1475,16 @@
     <ClCompile Include="src\Endeavor\Renderer\Renderer.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Endeavor\Renderer\Renderer2D.cpp">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\RendererAPI.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Shader.cpp">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Renderer\SubTexture2D.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Texture.cpp">
@@ -1475,6 +1497,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
@@ -1501,9 +1526,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Endeavor\Renderer\Renderer2D.cpp" />
-    <ClCompile Include="src\Endeavor\Renderer\SubTexture2D.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
-    <ClCompile Include="src\Endeavor\Renderer\Framebuffer.cpp" />
   </ItemGroup>
 </Project>

@@ -22,7 +22,6 @@ private:
 	// TEMP
 	Endeavor::Ref<Endeavor::VertexArray> m_SquareVA;
 	Endeavor::Ref<Endeavor::Shader> m_FlatColorShader;
-	Endeavor::Ref<Endeavor::Framebuffer> m_Framebuffer;
 
 	Endeavor::Ref<Endeavor::Texture2D> m_CheckerboardTexture;
 
