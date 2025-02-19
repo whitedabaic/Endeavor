@@ -23,7 +23,7 @@ private:
 	Endeavor::Ref<Endeavor::VertexArray> m_SquareVA;
 	Endeavor::Ref<Endeavor::Shader> m_FlatColorShader;
 
-	Endeavor::Ref<Endeavor::Texture2D> m_CheckboardTexture;
+	Endeavor::Ref<Endeavor::Texture2D> m_CheckerboardTexture;
 	Endeavor::Ref<Endeavor::Texture2D> m_SpriteSheet;
 	Endeavor::Ref<Endeavor::SubTexture2D> m_TextureStairs;
 	Endeavor::Ref<Endeavor::SubTexture2D> m_TextureBarrel;
