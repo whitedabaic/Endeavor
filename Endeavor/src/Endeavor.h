@@ -10,7 +10,7 @@
 
 #include "Endeavor/Core/Input.h"
 #include "Endeavor/Core/KeyCodes.h"
-#include "Endeavor/Core/MouseButtonCodes.h"
+#include "Endeavor/Core/MouseCodes.h"
 #include "Endeavor/Renderer/OrthographicCameraController.h"
 
 #include "Endeavor/ImGui/ImGuiLayer.h"

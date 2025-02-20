@@ -4,7 +4,7 @@
 
 namespace Endeavor {
 
-	class ENDEAVOR_API KeyEvent : public Event
+	class KeyEvent : public Event
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
@@ -17,7 +17,7 @@ namespace Endeavor {
 		int m_KeyCode;
 	};
 
-	class ENDEAVOR_API KeyPressedEvent : public KeyEvent
+	class KeyPressedEvent : public KeyEvent
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
@@ -38,7 +38,7 @@ namespace Endeavor {
 		int m_RepeatCount;
 	};
 
-	class ENDEAVOR_API KeyReleasedEvent : public KeyEvent
+	class KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)
@@ -55,7 +55,7 @@ namespace Endeavor {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class ENDEAVOR_API KeyTypedEvent : public KeyEvent
+	class KeyTypedEvent : public KeyEvent
 	{
 	public:
 		KeyTypedEvent(int keycode)
