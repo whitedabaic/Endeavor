@@ -18,6 +18,7 @@ IncludeDir["Glad"] = "Endeavor/vendor/Glad/include"
 IncludeDir["Imgui"] = "Endeavor/vendor/imgui"
 IncludeDir["glm"] = "Endeavor/vendor/glm"
 IncludeDir["stb_image"] = "Endeavor/vendor/stb_image"
+IncludeDir["entt"] = "Endeavor/vendor/entt/include"
 
 group "Dependencies"
 	include "Endeavor/vendor/GLFW"
@@ -62,7 +63,8 @@ project "Endeavor"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.Imgui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}"
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -122,7 +124,8 @@ project "Sandbox"
 		"Endeavor/vendor/spdlog/include",
 		"Endeavor/src",
 		"Endeavor/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
