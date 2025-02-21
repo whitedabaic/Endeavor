@@ -180,7 +180,8 @@ project "Endeavor-Editor"
 		"Endeavor/vendor/spdlog/include",
 		"Endeavor/src",
 		"Endeavor/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links

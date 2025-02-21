@@ -15,6 +15,9 @@
 
 #include "Endeavor/ImGui/ImGuiLayer.h"
 
+#include "Endeavor/Scene/Scene.h"
+#include "Endeavor/Scene/Components.h"
+
 //---‰÷»æ------------------------
 #include "Endeavor/Renderer/Renderer.h"
 #include "Endeavor/Renderer/Renderer2D.h"
