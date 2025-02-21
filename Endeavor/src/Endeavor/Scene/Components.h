@@ -2,6 +2,8 @@
 
 #include <glm/glm.hpp>
 
+#include "Endeavor/Renderer/Camera.h"
+
 namespace Endeavor {
 
 	struct TagComponent
@@ -36,5 +38,17 @@ namespace Endeavor {
 		SpriteRendererComponent(const SpriteRendererComponent&) = default;
         SpriteRendererComponent(const glm::vec4& color)
 			: Color(color) {}
+	};
+
+	struct CameraComponent
+	{
+		Camera Camera;
+		bool Primary = true;
+
+		CameraComponent() = default;
+		CameraComponent(const CameraComponent&) = default;
+		CameraComponent(const glm::mat4& projection)
+			: Camera(projection) {
+		}
 	};
 }

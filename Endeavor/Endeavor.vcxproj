@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Endeavor.h" />
+    <ClInclude Include="src\Endeavor\Renderer\Camera.h" />
     <ClInclude Include="src\Endeavor\Core\Application.h" />
     <ClInclude Include="src\Endeavor\Core\Base.h" />
     <ClInclude Include="src\Endeavor\Core\EntryPoint.h" />
