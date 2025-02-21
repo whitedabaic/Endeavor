@@ -178,6 +178,7 @@
     <ClInclude Include="src\Endeavor\Renderer\Texture.h" />
     <ClInclude Include="src\Endeavor\Renderer\VertexArray.h" />
     <ClInclude Include="src\Endeavor\Scene\Components.h" />
+    <ClInclude Include="src\Endeavor\Scene\Entity.h" />
     <ClInclude Include="src\Endeavor\Scene\Scene.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
@@ -627,6 +628,7 @@
     <ClCompile Include="src\Endeavor\Renderer\SubTexture2D.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\Texture.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\Endeavor\Scene\Entity.cpp" />
     <ClCompile Include="src\Endeavor\Scene\Scene.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
