@@ -69,9 +69,5 @@ namespace Endeavor {
 		m_Specification.Height = height;
 
 		Invalidate();
-
-		Bind();
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		UnBind();
 	}
 }

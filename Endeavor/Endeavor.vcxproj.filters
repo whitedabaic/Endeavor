@@ -1442,6 +1442,7 @@
     </ClInclude>
     <ClInclude Include="src\Endeavor\Scene\Entity.h" />
     <ClInclude Include="src\Endeavor\Renderer\Camera.h" />
+    <ClInclude Include="src\Endeavor\Scene\SceneCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Core\Application.cpp">
@@ -1533,5 +1534,6 @@
     </ClCompile>
     <ClCompile Include="src\Endeavor\Scene\Entity.cpp" />
     <ClCompile Include="src\Endeavor\Core\Window.cpp" />
+    <ClCompile Include="src\Endeavor\Scene\SceneCamera.cpp" />
   </ItemGroup>
 </Project>
