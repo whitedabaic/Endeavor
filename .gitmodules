@@ -1,12 +1,16 @@
 [submodule "Endeavor/vendor/spdlog"]
 	path = Endeavor/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+	branch = v1.x
 [submodule "Endeavor/vendor/GLFW"]
 	path = Endeavor/vendor/GLFW
 	url = https://github.com/TheCherno/glfw.git
+	branch = master
 [submodule "Endeavor/vendor/imgui"]
 	path = Endeavor/vendor/imgui
 	url = https://github.com/TheCherno/imgui.git
+	branch = docking
 [submodule "Endeavor/vendor/glm"]
 	path = Endeavor/vendor/glm
 	url = https://github.com/g-truc/glm.git
+	branch = master

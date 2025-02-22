@@ -9,6 +9,11 @@ workspace "Endeavor"
 		"Dist"
 	}
 
+	flags
+	{
+		"MultiProcessorCompile"
+	}
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- include directories relative to root folder (solution directory)
@@ -80,7 +85,6 @@ project "Endeavor"
 
 		defines
 		{
-			"ED_PLATFORM_WINDOWS",
 			"ED_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
 		}
@@ -135,11 +139,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		systemversion "latest"
-
-		defines
-		{
-			"ED_PLATFORM_WINDOWS"
-		}
 
 		filter "configurations:Debug"
 			defines "ED_DEBUG"

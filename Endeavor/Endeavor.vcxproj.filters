@@ -144,9 +144,6 @@
     <ClInclude Include="src\Endeavor\Renderer\Shader.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Renderer\SubTexture2D.h">
-      <Filter>src\Endeavor\Renderer</Filter>
-    </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Texture.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
@@ -1492,9 +1489,6 @@
     <ClCompile Include="src\Endeavor\Renderer\Shader.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\Endeavor\Renderer\SubTexture2D.cpp">
-      <Filter>src\Endeavor\Renderer</Filter>
-    </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Texture.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
@@ -1538,5 +1532,6 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Scene\Entity.cpp" />
+    <ClCompile Include="src\Endeavor\Core\Window.cpp" />
   </ItemGroup>
 </Project>

@@ -11,14 +11,14 @@
 
 #include "Endeavor/ImGui/ImGuiLayer.h"
 
+int main(int argc, char** argv);
+
 namespace Endeavor {
 	class Application
 	{
 	public:
 		Application(const std::string& name = "Endeavor App");
 		virtual ~Application();
-
-		void Run();
 
 		void OnEvent(Event& e);
 
@@ -33,6 +33,7 @@ namespace Endeavor {
 
 		static Application& Get() { return *s_Instance; }
 	private:
+		void Run();
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
 	private:
@@ -45,6 +46,7 @@ namespace Endeavor {
 		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
+		friend int ::main(int argc, char** argv);
 	};
 
 	//定义在客户端

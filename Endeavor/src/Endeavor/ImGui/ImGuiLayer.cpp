@@ -18,10 +18,6 @@ namespace Endeavor
 	{
 	}
 
-	ImGuiLayer::~ImGuiLayer()
-	{
-	}
-
 	void ImGuiLayer::OnAttach()
 	{
 		ED_PROFILE_FUNCTION();

@@ -67,12 +67,11 @@ namespace Endeavor {
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
 
-		//ED_CORE_INFO("{0}", e.ToString());
-		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
+		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend(); ++it)
 		{
 			if (e.Handled)
 				break;
-			(*--it)->OnEvent(e);
+			(*it)->OnEvent(e);
 		}
 	}
 

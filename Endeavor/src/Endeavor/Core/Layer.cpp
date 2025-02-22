@@ -7,7 +7,4 @@ namespace Endeavor
 		: m_DebugName(debugName)
 	{
 	}
-	Layer::~Layer()
-	{
-	}
 }
