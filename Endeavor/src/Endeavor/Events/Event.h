@@ -1,6 +1,7 @@
 #pragma once
-#include "edpch.h"
+#include <functional>
 
+#include "Endeavor/Debug/Instrumentor.h"
 #include "Endeavor/Core/Base.h"
 
 namespace Endeavor {

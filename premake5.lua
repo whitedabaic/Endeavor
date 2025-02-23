@@ -1,3 +1,5 @@
+include "vendor/premake/premake_customization/solution_items.lua"
+
 workspace "Endeavor"
 	architecture "x86_64"
 	startproject "Sandbox"
@@ -7,6 +9,11 @@ workspace "Endeavor"
 		"Debug",
 		"Release",
 		"Dist"
+	}
+	
+	solution_items
+	{
+		".editorconfig"
 	}
 
 	flags
@@ -18,198 +25,21 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["GLFW"] = "Endeavor/vendor/GLFW/include"
-IncludeDir["Glad"] = "Endeavor/vendor/Glad/include"
-IncludeDir["Imgui"] = "Endeavor/vendor/imgui"
-IncludeDir["glm"] = "Endeavor/vendor/glm"
-IncludeDir["stb_image"] = "Endeavor/vendor/stb_image"
-IncludeDir["entt"] = "Endeavor/vendor/entt/include"
+IncludeDir["GLFW"] = "%{wks.location}/Endeavor/vendor/GLFW/include"
+IncludeDir["Glad"] = "%{wks.location}/Endeavor/vendor/Glad/include"
+IncludeDir["ImGui"] = "%{wks.location}/Endeavor/vendor/imgui"
+IncludeDir["glm"] = "%{wks.location}/Endeavor/vendor/glm"
+IncludeDir["stb_image"] = "%{wks.location}/Endeavor/vendor/stb_image"
+IncludeDir["entt"] = "%{wks.location}/Endeavor/vendor/entt/include"
 
 group "Dependencies"
+	include "vendor/premake"
 	include "Endeavor/vendor/GLFW"
 	include "Endeavor/vendor/Glad"
 	include "Endeavor/vendor/imgui"
 
 group ""
 
-project "Endeavor"
-	location "Endeavor"
-	kind "StaticLib"
-	language "C++"
-	cppdialect "C++17"
-	staticruntime "on"
-
-	targetdir("bin/" .. outputdir .. "/%{prj.name}")
-	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
-
-	pchheader "edpch.h"
-	pchsource "Endeavor/src/edpch.cpp"
-
-	files
-	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
-		"%{prj.name}/vendor/stb_image/**.h",
-		"%{prj.name}/vendor/stb_image/**.cpp",
-		"%{prj.name}/vendor/glm/glm/**.hpp",
-		"%{prj.name}/vendor/glm/glm/**.inl"
-	}
-
-	defines
-	{
-		"_CRT_SECURE_NO_WARNINGS"
-	}
-
-	includedirs
-	{
-		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}",
-		"%{IncludeDir.Imgui}",
-		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.entt}"
-	}
-
-	links
-	{
-		"GLFW",
-		"Glad",
-		"Imgui",
-		"opengl32.lib"
-	}
-
-	filter "system:windows"
-		systemversion "latest"
-
-		defines
-		{
-			"ED_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
-		}
-
-		filter "configurations:Debug"
-			defines "ED_DEBUG"
-			runtime "Debug"
-			buildoptions "/utf-8"
-			symbols "on"
-
-		filter "configurations:Release"
-			defines "ED_RELEASE"
-			runtime "Release"
-			buildoptions "/utf-8"
-			optimize "on"
-
-		filter "configurations:Dist"
-			defines "ED_DIST"
-			runtime "Release"
-			buildoptions "/utf-8"
-			optimize "on"
-
-project "Sandbox"
-	location "Sandbox"
-	kind "ConsoleApp"
-	language "C++"
-	cppdialect "C++17"
-	staticruntime "on"
-
-	targetdir("bin/" .. outputdir .. "/%{prj.name}")
-	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
-
-	files
-	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
-	}
-
-	includedirs
-	{
-		"Endeavor/vendor/spdlog/include",
-		"Endeavor/src",
-		"Endeavor/vendor",
-		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
-	}
-
-	links
-	{
-		"Endeavor"
-	}
-
-	filter "system:windows"
-		systemversion "latest"
-
-		filter "configurations:Debug"
-			defines "ED_DEBUG"
-			runtime "Debug"
-			buildoptions "/utf-8"
-			symbols "on"
-
-		filter "configurations:Release"
-			defines "ED_RELEASE"
-			runtime "Release"
-			buildoptions "/utf-8"
-			optimize "on"
-
-		filter "configurations:Dist"
-			defines "ED_DIST"
-			runtime "Release"
-			buildoptions "/utf-8"
-			optimize "on"
-
-project "Endeavor-Editor"
-	location "Endeavor-Editor"
-	kind "ConsoleApp"
-	language "C++"
-	cppdialect "C++17"
-	staticruntime "on"
-
-	targetdir("bin/" .. outputdir .. "/%{prj.name}")
-	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
-
-	files
-	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
-	}
-
-	includedirs
-	{
-		"Endeavor/vendor/spdlog/include",
-		"Endeavor/src",
-		"Endeavor/vendor",
-		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
-	}
-
-	links
-	{
-		"Endeavor"
-	}
-
-	filter "system:windows"
-		systemversion "latest"
-
-		defines
-		{
-			"ED_PLATFORM_WINDOWS"
-		}
-
-		filter "configurations:Debug"
-			defines "ED_DEBUG"
-			runtime "Debug"
-			buildoptions "/utf-8"
-			symbols "on"
-
-		filter "configurations:Release"
-			defines "ED_RELEASE"
-			runtime "Release"
-			buildoptions "/utf-8"
-			optimize "on"
-
-		filter "configurations:Dist"
-			defines "ED_DIST"
-			runtime "Release"
-			buildoptions "/utf-8"
-			optimize "on"
+include "Endeavor"
+include "Sandbox"
+include "Endeavor-Editor"

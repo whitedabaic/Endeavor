@@ -1,6 +1,5 @@
 #pragma once
-
-#include "Endeavor/Core/Base.h"
+#include <glm/glm.hpp>
 #include "Endeavor/Core/KeyCodes.h"
 #include "Endeavor/Core/MouseCodes.h"
 
@@ -12,7 +11,7 @@ namespace Endeavor {
 		static bool IsKeyPressed(KeyCode key);
 
 		static bool IsMouseButtonPressed(MouseCode button);
-		static std::pair<float, float> GetMousePosition();
+		static glm::vec2 GetMousePosition();
 		static float GetMouseX();
 		static float GetMouseY();
 	};

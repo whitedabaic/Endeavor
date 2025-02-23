@@ -6,6 +6,10 @@
 #include <iomanip>
 #include <string>
 #include <thread>
+#include <mutex>
+#include <sstream>
+
+#include "Endeavor/Core/Log.h"
 
 namespace Endeavor {
 
@@ -201,10 +205,10 @@ namespace Endeavor {
 
 	#define ED_PROFILE_BEGIN_SESSION(name, filepath) ::Endeavor::Instrumentor::Get().BeginSession(name, filepath)
 	#define ED_PROFILE_END_SESSION() ::Endeavor::Instrumentor::Get().EndSession()
-	#define HZ_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = ::Hazel::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
+	#define ED_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = ::Hazel::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
 												   ::Hazel::InstrumentationTimer timer##line(fixedName##line.Data)
-	#define HZ_PROFILE_SCOPE_LINE(name, line) HZ_PROFILE_SCOPE_LINE2(name, line)
-	#define HZ_PROFILE_SCOPE(name) HZ_PROFILE_SCOPE_LINE(name, __LINE__)
+	#define ED_PROFILE_SCOPE_LINE(name, line) ED_PROFILE_SCOPE_LINE2(name, line)
+	#define ED_PROFILE_SCOPE(name) ED_PROFILE_SCOPE_LINE(name, __LINE__)
 	#define ED_PROFILE_FUNCTION() ED_PROFILE_SCOPE(ED_FUNC_SIG)
 #else
 	#define ED_PROFILE_BEGIN_SESSION(name, filepath)

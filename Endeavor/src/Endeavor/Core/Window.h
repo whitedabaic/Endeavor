@@ -1,6 +1,6 @@
 #pragma once
 
-#include "edpch.h"
+#include <sstream>
 
 #include "Endeavor/Core/Base.h"
 #include "Endeavor/Events/Event.h"
