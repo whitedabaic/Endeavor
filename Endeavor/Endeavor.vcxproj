@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="src\Endeavor.h" />
     <ClInclude Include="src\Endeavor\Core\Application.h" />
+    <ClInclude Include="src\Endeavor\Core\Assert.h" />
     <ClInclude Include="src\Endeavor\Core\Base.h" />
     <ClInclude Include="src\Endeavor\Core\EntryPoint.h" />
     <ClInclude Include="src\Endeavor\Core\Input.h" />

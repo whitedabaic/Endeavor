@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Endeavor/Core/Base.h"
-#include "Endeavor/Core/Log.h"
 #include "Endeavor/Scene/Scene.h"
 #include "Endeavor/Scene/Entity.h"
 

@@ -18,13 +18,8 @@
 	#define ED_DEBUGBREAK()
 #endif
 
-#ifdef ED_ENABLE_ASSERTS
-	#define ED_ASSERT(x, ...) { if(!(x)) { ED_ERROR("Assertion Failed: {0}", __VA_ARGS__); ED_DEBUGBREAK(); } }
-	#define ED_CORE_ASSERT(x, ...) { if(!(x)) { ED_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); ED_DEBUGBREAK(); } }
-#else
-	#define ED_ASSERT(x, ...)
-	#define ED_CORE_ASSERT(x, ...)
-#endif
+#define ED_EXPAND_MACRO(x) x
+#define ED_STRINGIFY_MACRO(x) #x
 
 #define BIT(x) (1 << x)
 
@@ -47,3 +42,6 @@ namespace Endeavor {
 		return std::make_shared<T>(std::forward<Args>(args)...);
 	}
 }
+
+#include "Endeavor/Core/Log.h"
+#include "Endeavor/Core/Assert.h"

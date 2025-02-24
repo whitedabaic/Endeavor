@@ -5,6 +5,7 @@
 #include "Endeavor/Core/Application.h"
 #include "Endeavor/Core/Layer.h"
 #include "Endeavor/Core/Log.h"
+#include "Endeavor/Core/Assert.h"
 
 #include "Endeavor/Core/Timestep.h"
 

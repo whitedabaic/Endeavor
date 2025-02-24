@@ -9,6 +9,15 @@ namespace Endeavor {
 		RecalculateProjection();
 	}
 
+	void SceneCamera::SetPerspective(float verticalFov, float nearClip, float farClip)
+	{
+		m_ProjectionType = ProjectionType::Perspective;
+		m_PerspectiveFOV = verticalFov;
+		m_PerspectiveNear = nearClip;
+		m_PerspectiveFar = farClip;
+		RecalculateProjection();
+	}
+
 	void SceneCamera::SetOrthographic(float size, float nearClip, float farClip)
 	{
 		m_ProjectionType = ProjectionType::Orthographic;
@@ -16,15 +25,6 @@ namespace Endeavor {
 		m_OrthographicNear = nearClip;
 		m_OrthographicFar = farClip;
 
-		RecalculateProjection();
-	}
-
-	void SceneCamera::SetPerspective(float verticalFov, float nearClip, float farClip)
-	{
-		m_ProjectionType = ProjectionType::Perspective;
-		m_PerspectiveFOV = verticalFov;
-		m_PerspectiveNear = nearClip;
-		m_PerspectiveFar = farClip;
 		RecalculateProjection();
 	}
 
