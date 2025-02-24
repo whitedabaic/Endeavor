@@ -10,7 +10,7 @@
 #endif
 
 #include <iostream>
-#include <memory>5
+#include <memory>
 #include <utility>
 #include <algorithm>
 #include <functional>
