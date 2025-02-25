@@ -31,13 +31,14 @@ IncludeDir["ImGui"] = "%{wks.location}/Endeavor/vendor/imgui"
 IncludeDir["glm"] = "%{wks.location}/Endeavor/vendor/glm"
 IncludeDir["stb_image"] = "%{wks.location}/Endeavor/vendor/stb_image"
 IncludeDir["entt"] = "%{wks.location}/Endeavor/vendor/entt/include"
+IncludeDir["yaml_cpp"] = "%{wks.location}/Endeavor/vendor/yaml-cpp/include"
 
 group "Dependencies"
 	include "vendor/premake"
 	include "Endeavor/vendor/GLFW"
 	include "Endeavor/vendor/Glad"
 	include "Endeavor/vendor/imgui"
-
+	include "Endeavor/vendor/yaml-cpp"
 group ""
 
 include "Endeavor"
