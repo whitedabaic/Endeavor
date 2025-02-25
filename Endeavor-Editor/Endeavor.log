@@ -1,5 +1,5 @@
-[22:16:56] [info] ENDEAVOR: Creating window Endeavor Editor (1280, 720)
-[22:16:57] [info] ENDEAVOR:   Vendor: Intel
-[22:16:57] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[22:16:57] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[22:18:09] [info] ENDEAVOR: Terminating GLFW
+[17:23:30] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
+[17:23:31] [info] ENDEAVOR:   Vendor: Intel
+[17:23:31] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[17:23:31] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
+[17:23:42] [info] ENDEAVOR: Terminating GLFW
