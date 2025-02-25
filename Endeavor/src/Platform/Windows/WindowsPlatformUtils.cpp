@@ -1,6 +1,7 @@
 #include "edpch.h"
 #include "Endeavor/Utils/PlatformUtils.h"
 
+#include <sstream>
 #include <commdlg.h>
 #include <GLFW/glfw3.h>
 #define GLFW_EXPOSE_NATIVE_WIN32
@@ -10,7 +11,7 @@
 
 namespace Endeavor {
 
-	std::string FileDialogs::OpenFile(const char* filter)
+	std::optional<std::string> FileDialogs::OpenFile(const char* filter)
 	{
 		OPENFILENAMEA ofn;
 		CHAR szFile[260] = { 0 };
@@ -26,10 +27,10 @@ namespace Endeavor {
 		{
 			return ofn.lpstrFile;
 		}
-		return std::string();
+		return std::nullopt;
 	}
 
-	std::string FileDialogs::SaveFile(const char* filter)
+	std::optional<std::string> FileDialogs::SaveFile(const char* filter)
 	{
 		OPENFILENAMEA ofn;
 		CHAR szFile[260] = { 0 };
@@ -41,10 +42,13 @@ namespace Endeavor {
 		ofn.lpstrFilter = filter;
 		ofn.nFilterIndex = 1;
 		ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST | OFN_NOCHANGEDIR;
+
+		ofn.lpstrDefExt = strchr(filter, '\0') + 1;
+
 		if (GetSaveFileNameA(&ofn) == TRUE)
 		{
 			return ofn.lpstrFile;
 		}
-		return std::string();
+		return std::nullopt;
 	}
 }

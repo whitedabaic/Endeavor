@@ -1,15 +1,4 @@
-[22:46:14] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
-[22:46:15] [info] ENDEAVOR:   Vendor: Intel
-[22:46:15] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[22:46:15] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[22:46:21] [trace] ENDEAVOR: Deserializing scene 'Untitled'
-[22:46:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera B
-[22:46:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera A
-[22:46:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Red Square
-[22:46:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Green Square
-[22:46:28] [trace] ENDEAVOR: Deserializing scene 'Untitled'
-[22:46:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Green Square
-[22:46:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Red Square
-[22:46:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera A
-[22:46:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera B
-[22:47:59] [info] ENDEAVOR: Terminating GLFW
+[23:05:28] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
+[23:05:30] [info] ENDEAVOR:   Vendor: Intel
+[23:05:30] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[23:05:30] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
