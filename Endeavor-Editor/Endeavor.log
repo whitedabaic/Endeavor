@@ -1,10 +1,10 @@
-[17:23:44] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
-[17:23:45] [info] ENDEAVOR:   Vendor: Intel
-[17:23:45] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[17:23:45] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[17:23:53] [trace] ENDEAVOR: Deserializing scene 'Untitled'
-[17:23:53] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Top
-[17:23:53] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
-[17:23:53] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Right
-[17:23:53] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Left
-[17:24:57] [info] ENDEAVOR: Terminating GLFW
+[22:11:58] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
+[22:11:59] [info] ENDEAVOR:   Vendor: Intel
+[22:11:59] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[22:11:59] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
+[22:12:03] [trace] ENDEAVOR: Deserializing scene 'Untitled'
+[22:12:03] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Top
+[22:12:03] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
+[22:12:03] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Right
+[22:12:03] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Left
+[22:12:37] [info] ENDEAVOR: Terminating GLFW
