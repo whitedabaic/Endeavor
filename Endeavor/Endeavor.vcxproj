@@ -173,6 +173,7 @@
     <ClInclude Include="src\Endeavor\Math\Math.h" />
     <ClInclude Include="src\Endeavor\Renderer\Buffer.h" />
     <ClInclude Include="src\Endeavor\Renderer\Camera.h" />
+    <ClInclude Include="src\Endeavor\Renderer\EditorCamera.h" />
     <ClInclude Include="src\Endeavor\Renderer\Framebuffer.h" />
     <ClInclude Include="src\Endeavor\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Endeavor\Renderer\OrthographicCamera.h" />
@@ -631,6 +632,7 @@
     <ClCompile Include="src\Endeavor\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Endeavor\Math\Math.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Endeavor\Renderer\EditorCamera.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\Framebuffer.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Endeavor\Renderer\OrthographicCameraController.cpp" />

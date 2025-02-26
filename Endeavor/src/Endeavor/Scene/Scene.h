@@ -1,7 +1,9 @@
 #pragma once
 
-#include "entt.hpp"
 #include "Endeavor/Core/Timestep.h"
+#include "Endeavor/Renderer/EditorCamera.h"
+
+#include "entt.hpp"
 
 namespace Endeavor {
 
@@ -16,7 +18,8 @@ namespace Endeavor {
 		Entity CreateEntity(const std::string& name = std::string());
 		void DestroyEntity(Entity entity);
 
-		void OnUpdate(Timestep ts);
+		void OnUpdateEditor(Timestep ts, EditorCamera& camera);
+		void OnUpdateRuntime(Timestep ts);
 		void OnViewportResize(uint32_t width, uint32_t height);
 
 		Entity GetPrimaryCameraEntity();
