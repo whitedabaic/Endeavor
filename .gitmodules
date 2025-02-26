@@ -17,3 +17,6 @@
 [submodule "Endeavor/vendor/yaml-cpp"]
 	path = Endeavor/vendor/yaml-cpp
 	url = https://github.com/TheCherno/yaml-cpp.git
+[submodule "Endeavor/vendor/ImGuizmo"]
+	path = Endeavor/vendor/ImGuizmo
+	url = https://github.com/TheCherno/ImGuizmo.git

@@ -1,4 +1,4 @@
-project "Endeavor-Editor"
+project "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
@@ -19,8 +19,7 @@ project "Endeavor-Editor"
 		"%{wks.location}/Endeavor/src",
 		"%{wks.location}/Endeavor/vendor",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}",
-		"%{IncludeDir.ImGuizmo}"
+		"%{IncludeDir.entt}"
 	}
 
 	links
