@@ -75,6 +75,18 @@ namespace Endeavor {
 
 			return false;
 		}
+
+		static GLenum EndeavorFBTextureFormatToGL(FramebufferTextureFormat format)
+		{
+			switch (format)
+			{
+				case FramebufferTextureFormat::RGBA8:			return GL_RGBA8;
+				case FramebufferTextureFormat::RED_INTEGER:		return GL_RED_INTEGER;
+				case FramebufferTextureFormat::DEPTH24STENCIL8: return GL_DEPTH24_STENCIL8;
+			}
+			ED_CORE_ASSERT(false, "Unknown format!");
+			return 0;
+		}
 	}
 
 	OpenGLFramebuffer::OpenGLFramebuffer(const FramebufferSpecification& spec)
@@ -168,6 +180,7 @@ namespace Endeavor {
 	{
 		glBindFramebuffer(GL_FRAMEBUFFER, m_RendererID);
 		glViewport(0, 0, m_Specification.Width, m_Specification.Height);
+
 	}
 	void OpenGLFramebuffer::UnBind()
 	{
@@ -194,5 +207,13 @@ namespace Endeavor {
 		int pixelData;
 		glReadPixels(x, y, 1, 1, GL_RED_INTEGER, GL_INT, &pixelData);
 		return pixelData;
+	}
+	void OpenGLFramebuffer::ClearAttachment(uint32_t attachmentIndex, int value)
+	{
+		ED_CORE_ASSERT(attachmentIndex < m_ColorAttachments.size(), "Attachment index out of range");
+
+		auto& spec = m_ColorAttachmentSpecifications[attachmentIndex];
+		glClearTexImage(m_ColorAttachments[attachmentIndex], 0, 
+			Utils::EndeavorFBTextureFormatToGL(spec.TextureFormat), GL_INT, &value);
 	}
 }
