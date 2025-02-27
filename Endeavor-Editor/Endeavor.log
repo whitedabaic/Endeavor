@@ -1,11 +1,11 @@
-[18:16:15] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
-[18:16:16] [info] ENDEAVOR:   Vendor: Intel
-[18:16:16] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[18:16:16] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[18:16:22] [trace] ENDEAVOR: Deserializing scene 'Untitled'
-[18:16:22] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Top
-[18:16:22] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
-[18:16:22] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Right
-[18:16:22] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Left
-[18:16:22] [error] ENDEAVOR: API_ID_RECOMPILE_FRAGMENT_SHADER performance warning has been generated. Fragment shader recompiled due to state change.
-[18:17:59] [info] ENDEAVOR: Terminating GLFW
+[20:57:21] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
+[20:57:22] [info] ENDEAVOR:   Vendor: Intel
+[20:57:22] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[20:57:22] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
+[20:57:28] [trace] ENDEAVOR: Deserializing scene 'Untitled'
+[20:57:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Top
+[20:57:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
+[20:57:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Right
+[20:57:28] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Left
+[20:57:28] [error] ENDEAVOR: API_ID_RECOMPILE_FRAGMENT_SHADER performance warning has been generated. Fragment shader recompiled due to state change.
+[21:01:30] [info] ENDEAVOR: Terminating GLFW

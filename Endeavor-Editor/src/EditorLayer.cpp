@@ -135,7 +135,7 @@ namespace Endeavor {
 
 		if (mouseX >= 0 && mouseY >= 0 && mouseX < (int)viewportSize.x && mouseY < (int)viewportSize.y)
 		{
-			pixelData = m_Framebuffer->ReadPixel(1, mouseX, mouseY);
+			int pixelData = m_Framebuffer->ReadPixel(1, mouseX, mouseY);
 			m_HoveredEntity = pixelData == -1 ? Entity() : Entity((entt::entity)pixelData, m_ActiveScene.get());
 		}
 
@@ -230,7 +230,15 @@ namespace Endeavor {
 			name = m_HoveredEntity.GetComponent<TagComponent>().Tag;
 		ImGui::Text("Hovered Entity: %s", name.c_str());
 
+		if (name != "None")
+		{
+			ImGui::Separator();
+			auto& tc = m_HoveredEntity.GetComponent<TransformComponent>();
+			ImGui::Text("Position: %.2f, %.2f, %.2f", tc.Translation.x, tc.Translation.y, tc.Translation.z);
+			ImGui::Text("Rotation: %.2f, %.2f, %.2f", tc.Rotation.x, tc.Rotation.y, tc.Rotation.z);
+			ImGui::Text("Scale: %.2f, %.2f, %.2f", tc.Scale.x, tc.Scale.y, tc.Scale.z);
 
+		}
 		auto stats = Renderer2D::GetStats();
 		ImGui::Text("Renderer2D Stats:");
 		ImGui::Text("Draw Calls: %d", stats.DrawCalls);
@@ -321,6 +329,7 @@ namespace Endeavor {
 
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<KeyPressedEvent>(ED_BIND_EVENT_FN(EditorLayer::OnKeyPressed));
+		dispatcher.Dispatch<MouseButtonPressedEvent>(ED_BIND_EVENT_FN(EditorLayer::OnMouseButtonPressed));
 	}
 
 	bool EditorLayer::OnKeyPressed(KeyPressedEvent& e)
@@ -381,6 +390,16 @@ namespace Endeavor {
 				break;
 			}
 		}
+	}
+
+	bool EditorLayer::OnMouseButtonPressed(MouseButtonPressedEvent& e)
+	{
+		if (e.GetMouseButton() == Mouse::ButtonLeft)
+		{
+			if (m_ViewportHovered && !ImGuizmo::IsOver() && !Input::IsKeyPressed(Key::LeftAlt))
+				m_SceneHierarchyPanel.SetSelectedEntity(m_HoveredEntity);
+		}
+		return false;
 	}
 
 	void EditorLayer::NewScene()
