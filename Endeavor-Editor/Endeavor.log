@@ -1,23 +1,23 @@
-[18:51:14] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
-[18:51:15] [info] ENDEAVOR:   Vendor: Intel
-[18:51:15] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[18:51:15] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[18:51:15] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
-[18:51:15] [trace] ENDEAVOR:     1 uniform buffers
-[18:51:15] [trace] ENDEAVOR:     0 resources
-[18:51:15] [trace] ENDEAVOR: Uniform buffers:
-[18:51:15] [trace] ENDEAVOR:   _47_49
-[18:51:15] [trace] ENDEAVOR:     Size = 64
-[18:51:15] [trace] ENDEAVOR:     Binding = 0
-[18:51:15] [trace] ENDEAVOR:     Members = 1
-[18:51:15] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
-[18:51:15] [trace] ENDEAVOR:     0 uniform buffers
-[18:51:15] [trace] ENDEAVOR:     1 resources
-[18:51:15] [trace] ENDEAVOR: Uniform buffers:
-[18:51:15] [warning] ENDEAVOR: Shader creation took 39.310905 ms
-[18:51:21] [trace] ENDEAVOR: Deserializing scene 'Untitled'
-[18:51:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Top
-[18:51:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
-[18:51:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Right
-[18:51:21] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Left
-[18:52:34] [info] ENDEAVOR: Terminating GLFW
+[18:55:03] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
+[18:55:04] [info] ENDEAVOR:   Vendor: Intel
+[18:55:04] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[18:55:04] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
+[18:55:04] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
+[18:55:04] [trace] ENDEAVOR:     1 uniform buffers
+[18:55:04] [trace] ENDEAVOR:     0 resources
+[18:55:04] [trace] ENDEAVOR: Uniform buffers:
+[18:55:04] [trace] ENDEAVOR:   _47_49
+[18:55:04] [trace] ENDEAVOR:     Size = 64
+[18:55:04] [trace] ENDEAVOR:     Binding = 0
+[18:55:04] [trace] ENDEAVOR:     Members = 1
+[18:55:04] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
+[18:55:04] [trace] ENDEAVOR:     0 uniform buffers
+[18:55:04] [trace] ENDEAVOR:     1 resources
+[18:55:04] [trace] ENDEAVOR: Uniform buffers:
+[18:55:04] [warning] ENDEAVOR: Shader creation took 50.310905 ms
+[18:55:10] [trace] ENDEAVOR: Deserializing scene 'Untitled'
+[18:55:10] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Top
+[18:55:10] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
+[18:55:10] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Right
+[18:55:10] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Left
+[18:55:23] [info] ENDEAVOR: Terminating GLFW
