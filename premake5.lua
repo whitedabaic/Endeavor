@@ -1,4 +1,5 @@
 include "vendor/premake/premake_customization/solution_items.lua"
+include "Dependencies.lua"
 
 workspace "Endeavor"
 	architecture "x86_64"
@@ -22,17 +23,6 @@ workspace "Endeavor"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-
--- include directories relative to root folder (solution directory)
-IncludeDir = {}
-IncludeDir["GLFW"] = "%{wks.location}/Endeavor/vendor/GLFW/include"
-IncludeDir["Glad"] = "%{wks.location}/Endeavor/vendor/Glad/include"
-IncludeDir["ImGui"] = "%{wks.location}/Endeavor/vendor/imgui"
-IncludeDir["glm"] = "%{wks.location}/Endeavor/vendor/glm"
-IncludeDir["stb_image"] = "%{wks.location}/Endeavor/vendor/stb_image"
-IncludeDir["entt"] = "%{wks.location}/Endeavor/vendor/entt/include"
-IncludeDir["yaml_cpp"] = "%{wks.location}/Endeavor/vendor/yaml-cpp/include"
-IncludeDir["ImGuizmo"] = "%{wks.location}/Endeavor/vendor/ImGuizmo"
 
 group "Dependencies"
 	include "vendor/premake"

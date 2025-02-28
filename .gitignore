@@ -1,6 +1,5 @@
 # Binaries
 **/bin/
-!vendor/premake/bin/
 bin-int/
 
 # Visual Studio files and folder
@@ -9,3 +8,8 @@ bin-int/
 **.vcxproj
 **.vcxproj.filters
 **.vcxproj.user
+
+# Directories
+Endeavor/vendor/VulkanSDK
+Endeavor-Editor/assets/cache
+scripts/__pycache__

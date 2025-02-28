@@ -8,8 +8,8 @@ namespace Endeavor {
 	class EndeavorEditor : public Application
 	{
 	public:
-		EndeavorEditor()
-			: Application("Endeavor Editor")
+		EndeavorEditor(ApplicationCommandLineArgs args)
+			: Application("Endeavor Editor", args)
 		{
 			PushLayer(new EditorLayer());
 		}
@@ -20,8 +20,8 @@ namespace Endeavor {
 		}
 	};
 
-	Application* CreateApplication()
+	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new EndeavorEditor();
+		return new EndeavorEditor(args);
 	}
 }

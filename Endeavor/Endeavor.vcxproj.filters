@@ -19,6 +19,9 @@
     <Filter Include="src\Endeavor\ImGui">
       <UniqueIdentifier>{FA98739E-E67C-34F4-4FDD-2E473BE01E76}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Endeavor\Math">
+      <UniqueIdentifier>{A94E2C79-1565-2A0F-5EDC-B530CA31FB96}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Endeavor\Renderer">
       <UniqueIdentifier>{7695B981-E201-757C-ABF5-0CDA172197E4}</UniqueIdentifier>
     </Filter>
@@ -102,6 +105,9 @@
     <ClInclude Include="src\Endeavor\Core\PlatformDetection.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\Timer.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Endeavor\Core\Timestep.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
@@ -126,10 +132,16 @@
     <ClInclude Include="src\Endeavor\ImGui\ImGuiLayer.h">
       <Filter>src\Endeavor\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Math\Math.h">
+      <Filter>src\Endeavor\Math</Filter>
+    </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Buffer.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Camera.h">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Renderer\EditorCamera.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Framebuffer.h">
@@ -160,6 +172,9 @@
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\Texture.h">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Endeavor\Renderer\UniformBuffer.h">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Endeavor\Renderer\VertexArray.h">
@@ -202,6 +217,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLUniformBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
@@ -1496,7 +1514,13 @@
     <ClCompile Include="src\Endeavor\ImGui\ImGuiLayer.cpp">
       <Filter>src\Endeavor\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\Endeavor\Math\Math.cpp">
+      <Filter>src\Endeavor\Math</Filter>
+    </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Buffer.cpp">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Renderer\EditorCamera.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Framebuffer.cpp">
@@ -1524,6 +1548,9 @@
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\Texture.cpp">
+      <Filter>src\Endeavor\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Renderer\UniformBuffer.cpp">
       <Filter>src\Endeavor\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Renderer\VertexArray.cpp">
@@ -1557,6 +1584,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLUniformBuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
