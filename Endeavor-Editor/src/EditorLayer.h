@@ -2,6 +2,7 @@
 
 #include "Endeavor.h"
 #include "Panels/SceneHierarchyPanel.h"
+#include "Panels/ContentBrowserPanel.h"
 
 #include "Endeavor/Renderer/EditorCamera.h"
 
@@ -57,5 +58,6 @@ namespace Endeavor {
 
 		// Panels
 		SceneHierarchyPanel m_SceneHierarchyPanel;
+		ContentBrowserPanel m_ContentBrowserPanel;
 	};
 }

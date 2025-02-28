@@ -34,9 +34,10 @@ namespace Endeavor
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoTaskBarIcons;
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoMerge;
 
-		io.Fonts->AddFontFromFileTTF("assets/fonts/opensans/OpenSans-Bold.ttf", 20.0f);
-		io.FontDefault = io.Fonts->AddFontFromFileTTF("assets/fonts/opensans/OpenSans-Regular.ttf", 18.0f);
-		//io.FontDefault = io.Fonts->AddFontFromFileTTF("assets/fonts/msyh.ttc", 18.0f, NULL, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
+		float fontSize = 18.0f * 2.0f;
+		io.Fonts->AddFontFromFileTTF("assets/fonts/opensans/OpenSans-Bold.ttf", fontSize);
+		io.FontDefault = io.Fonts->AddFontFromFileTTF("assets/fonts/opensans/OpenSans-Regular.ttf", fontSize);
+		//io.FontDefault = io.Fonts->AddFontFromFileTTF("assets/fonts/msyh.ttc", fontSize, NULL, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
 
 		ImGui::StyleColorsDark();
 

@@ -1,23 +1,18 @@
-[09:23:43] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
-[09:23:44] [info] ENDEAVOR:   Vendor: Intel
-[09:23:44] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[09:23:44] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[09:23:45] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
-[09:23:45] [trace] ENDEAVOR:     1 uniform buffers
-[09:23:45] [trace] ENDEAVOR:     0 resources
-[09:23:45] [trace] ENDEAVOR: Uniform buffers:
-[09:23:45] [trace] ENDEAVOR:   _47_49
-[09:23:45] [trace] ENDEAVOR:     Size = 64
-[09:23:45] [trace] ENDEAVOR:     Binding = 0
-[09:23:45] [trace] ENDEAVOR:     Members = 1
-[09:23:45] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
-[09:23:45] [trace] ENDEAVOR:     0 uniform buffers
-[09:23:45] [trace] ENDEAVOR:     1 resources
-[09:23:45] [trace] ENDEAVOR: Uniform buffers:
-[09:23:45] [warning] ENDEAVOR: Shader creation took 1354.6567 ms
-[09:24:02] [trace] ENDEAVOR: Deserializing scene 'Untitled'
-[09:24:02] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Top
-[09:24:02] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
-[09:24:02] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Right
-[09:24:02] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Left
-[09:24:18] [info] ENDEAVOR: Terminating GLFW
+[13:29:09] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
+[13:29:10] [info] ENDEAVOR:   Vendor: Intel
+[13:29:10] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[13:29:10] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
+[13:29:10] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
+[13:29:10] [trace] ENDEAVOR:     1 uniform buffers
+[13:29:10] [trace] ENDEAVOR:     0 resources
+[13:29:10] [trace] ENDEAVOR: Uniform buffers:
+[13:29:10] [trace] ENDEAVOR:   _47_49
+[13:29:10] [trace] ENDEAVOR:     Size = 64
+[13:29:10] [trace] ENDEAVOR:     Binding = 0
+[13:29:10] [trace] ENDEAVOR:     Members = 1
+[13:29:10] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
+[13:29:10] [trace] ENDEAVOR:     0 uniform buffers
+[13:29:10] [trace] ENDEAVOR:     1 resources
+[13:29:10] [trace] ENDEAVOR: Uniform buffers:
+[13:29:10] [warning] ENDEAVOR: Shader creation took 17.947205 ms
+[13:29:43] [info] ENDEAVOR: Terminating GLFW
