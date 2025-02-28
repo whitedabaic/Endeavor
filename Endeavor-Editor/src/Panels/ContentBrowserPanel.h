@@ -2,6 +2,8 @@
 
 #include <filesystem>
 
+#include "Endeavor/Renderer/Texture.h"
+
 namespace Endeavor {
 
 	class ContentBrowserPanel
@@ -16,5 +18,8 @@ namespace Endeavor {
 		void OnImGuiRender();
 	private:
 		std::filesystem::path m_CurrentDirectory;
+
+		Ref<Texture2D> m_DirectoryIcon;
+		Ref<Texture2D> m_FileIcon;
 	};
 }
