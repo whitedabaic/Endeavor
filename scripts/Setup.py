@@ -7,6 +7,9 @@ from SetupPython import PythonConfiguration as PythonRequirements
 # Make sure everything we need for the setup is installed
 PythonRequirements.Validate()
 
+print("\nUpdating submodules...")
+subprocess.call(["git", "submodule", "update", "--init", "--recursive"])
+
 from SetupPremake import PremakeConfiguration as PremakeRequirements
 from SetupVulkan import VulkanConfiguration as VulkanRequirements
 
