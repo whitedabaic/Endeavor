@@ -20,3 +20,6 @@
 [submodule "Endeavor/vendor/ImGuizmo"]
 	path = Endeavor/vendor/ImGuizmo
 	url = https://github.com/TheCherno/ImGuizmo.git
+[submodule "Endeavor/vendor/Box2D"]
+	path = Endeavor/vendor/Box2D
+	url = https://github.com/TheCherno/box2d.git

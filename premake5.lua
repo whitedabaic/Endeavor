@@ -26,6 +26,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 group "Dependencies"
 	include "vendor/premake"
+	include "Endeavor/vendor/Box2D"
 	include "Endeavor/vendor/GLFW"
 	include "Endeavor/vendor/Glad"
 	include "Endeavor/vendor/imgui"
