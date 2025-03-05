@@ -164,6 +164,7 @@
     <ClInclude Include="src\Endeavor\Core\PlatformDetection.h" />
     <ClInclude Include="src\Endeavor\Core\Timer.h" />
     <ClInclude Include="src\Endeavor\Core\Timestep.h" />
+    <ClInclude Include="src\Endeavor\Core\UUID.h" />
     <ClInclude Include="src\Endeavor\Core\Window.h" />
     <ClInclude Include="src\Endeavor\Debug\Instrumentor.h" />
     <ClInclude Include="src\Endeavor\Events\ApplicationEvent.h" />
@@ -630,6 +631,7 @@
     <ClCompile Include="src\Endeavor\Core\Layer.cpp" />
     <ClCompile Include="src\Endeavor\Core\LayerStack.cpp" />
     <ClCompile Include="src\Endeavor\Core\Log.cpp" />
+    <ClCompile Include="src\Endeavor\Core\UUID.cpp" />
     <ClCompile Include="src\Endeavor\Core\Window.cpp" />
     <ClCompile Include="src\Endeavor\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Endeavor\ImGui\ImGuiLayer.cpp" />

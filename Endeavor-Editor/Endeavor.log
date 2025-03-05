@@ -1,22 +1,32 @@
-[22:56:30] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
-[22:56:30] [info] ENDEAVOR:   Vendor: Intel
-[22:56:30] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[22:56:30] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[22:56:30] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
-[22:56:30] [trace] ENDEAVOR:     1 uniform buffers
-[22:56:30] [trace] ENDEAVOR:     0 resources
-[22:56:30] [trace] ENDEAVOR: Uniform buffers:
-[22:56:30] [trace] ENDEAVOR:   _46_48
-[22:56:30] [trace] ENDEAVOR:     Size = 64
-[22:56:30] [trace] ENDEAVOR:     Binding = 0
-[22:56:30] [trace] ENDEAVOR:     Members = 1
-[22:56:30] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
-[22:56:30] [trace] ENDEAVOR:     0 uniform buffers
-[22:56:30] [trace] ENDEAVOR:     1 resources
-[22:56:30] [trace] ENDEAVOR: Uniform buffers:
-[22:56:30] [warning] ENDEAVOR: Shader creation took 89.40632 ms
-[22:56:39] [trace] ENDEAVOR: Deserializing scene 'Untitled'
-[22:56:39] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Floor
-[22:56:39] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Sprite
-[22:56:39] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
-[22:56:49] [info] ENDEAVOR: Terminating GLFW
+[14:00:49] [info] ENDEAVOR: Creating window Endeavor Editor (1600, 900)
+[14:00:50] [info] ENDEAVOR:   Vendor: Intel
+[14:00:50] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[14:00:50] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
+[14:00:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
+[14:00:50] [trace] ENDEAVOR:     1 uniform buffers
+[14:00:50] [trace] ENDEAVOR:     0 resources
+[14:00:50] [trace] ENDEAVOR: Uniform buffers:
+[14:00:50] [trace] ENDEAVOR:   _46_48
+[14:00:50] [trace] ENDEAVOR:     Size = 64
+[14:00:50] [trace] ENDEAVOR:     Binding = 0
+[14:00:50] [trace] ENDEAVOR:     Members = 1
+[14:00:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
+[14:00:50] [trace] ENDEAVOR:     0 uniform buffers
+[14:00:50] [trace] ENDEAVOR:     1 resources
+[14:00:50] [trace] ENDEAVOR: Uniform buffers:
+[14:00:50] [warning] ENDEAVOR: Shader creation took 26.128403 ms
+[14:00:58] [trace] ENDEAVOR: Deserializing scene 'Untitled'
+[14:00:58] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Floor
+[14:00:58] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Sprite
+[14:00:58] [trace] ENDEAVOR: Deserialized entity with ID = 12837192831273, name = Camera
+[14:02:34] [trace] ENDEAVOR: Deserializing scene 'Untitled'
+[14:02:34] [trace] ENDEAVOR: Deserialized entity with ID = 12915243757854849779, name = Empty Entity
+[14:02:34] [trace] ENDEAVOR: Deserialized entity with ID = 12654809767401023005, name = Camera
+[14:02:34] [trace] ENDEAVOR: Deserialized entity with ID = 15913949167344730457, name = Sprite
+[14:02:34] [trace] ENDEAVOR: Deserialized entity with ID = 4000878394159135871, name = Floor
+[14:02:41] [trace] ENDEAVOR: Deserializing scene 'Untitled'
+[14:02:41] [trace] ENDEAVOR: Deserialized entity with ID = 12915243757854849779, name = Empty Entity
+[14:02:41] [trace] ENDEAVOR: Deserialized entity with ID = 12654809767401023005, name = Camera
+[14:02:41] [trace] ENDEAVOR: Deserialized entity with ID = 15913949167344730457, name = Sprite
+[14:02:41] [trace] ENDEAVOR: Deserialized entity with ID = 4000878394159135871, name = Floor
+[14:02:51] [info] ENDEAVOR: Terminating GLFW

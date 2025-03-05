@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Endeavor/Core/Timestep.h"
+#include "Endeavor/Core/UUID.h"
 #include "Endeavor/Renderer/EditorCamera.h"
 
 #include "entt.hpp"
@@ -18,6 +19,7 @@ namespace Endeavor {
 		~Scene();
 
 		Entity CreateEntity(const std::string& name = std::string());
+		Entity CreateEntityWithUUID(UUID uuid, const std::string& name = std::string());
 		void DestroyEntity(Entity entity);
 
 		void OnRuntimeStart();
