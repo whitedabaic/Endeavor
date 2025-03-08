@@ -155,7 +155,7 @@ namespace Endeavor {
 
 				b2CircleShape circleShape;
 				circleShape.m_p.Set(cc2d.Offset.x, cc2d.Offset.y);
-				circleShape.m_radius = cc2d.Radius;
+				circleShape.m_radius = transform.Scale.x * cc2d.Radius;
 
 				b2FixtureDef fixtureDef;
 				fixtureDef.shape = &circleShape;
@@ -270,8 +270,8 @@ namespace Endeavor {
 			for (auto entity : group)
 			{
 				auto [transform, sprite] = group.get<TransformComponent, SpriteRendererComponent>(entity);
-				//Renderer2D::DrawSprite(transform.GetTransform(), sprite, (int)entity);
-				Renderer2D::DrawRect(transform.GetTransform(), glm::vec4(1.0f), (int)entity);
+				Renderer2D::DrawSprite(transform.GetTransform(), sprite, (int)entity);
+				//Renderer2D::DrawRect(transform.GetTransform(), glm::vec4(1.0f), (int)entity);
 			}
 		}
 
@@ -285,9 +285,6 @@ namespace Endeavor {
 				Renderer2D::DrawCircle(transform.GetTransform(), circle.Color, circle.Thickness, circle.Fade, (int)entity);
 			}
 		}
-
-		Renderer2D::DrawLine(glm::vec3(2.0f), glm::vec3(5.0f), glm::vec4(1, 0, 1, 1));
-		Renderer2D::DrawRect(glm::vec3(0.0f), glm::vec3(1.0f), glm::vec4(1, 1, 1, 1));
 
 		Renderer2D::EndScene();
 	}
