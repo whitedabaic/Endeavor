@@ -111,6 +111,9 @@
     <ClInclude Include="src\Endeavor\Core\Timestep.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Endeavor\Core\UUID.h">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Endeavor\Core\Window.h">
       <Filter>src\Endeavor\Core</Filter>
     </ClInclude>
@@ -1491,7 +1494,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Endeavor\Core\UUID.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Endeavor\Core\Application.cpp">
@@ -1504,6 +1506,9 @@
       <Filter>src\Endeavor\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Core\Log.cpp">
+      <Filter>src\Endeavor\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Endeavor\Core\UUID.cpp">
       <Filter>src\Endeavor\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Endeavor\Core\Window.cpp">
@@ -1611,6 +1616,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Endeavor\Core\UUID.cpp" />
   </ItemGroup>
 </Project>
