@@ -1,13 +1,12 @@
 #include "edpch.h"
 #include "Scene.h"
+#include "Entity.h"
 
 #include "Components.h"
 #include "Endeavor/Scene/ScriptableEntity.h"
 #include "Endeavor/Renderer/Renderer2D.h"
 
 #include <glm/glm.hpp>
-
-#include "Entity.h"
 
 // Box2D
 #include "box2d/b2_world.h"
@@ -292,6 +291,12 @@ namespace Endeavor {
 		return {};
 	}
 
+	void Scene::DuplicateEntity(Entity entity)
+	{
+		Entity newEntity = CreateEntity(entity.GetName());
+		CopyComponentIfExists(AllComponents{}, newEntity, entity);
+	}
+
 	void Scene::OnPhysics2DStart()
 	{
 		m_PhysicsWorld = new b2World({ 0.0f, -9.8f });
@@ -382,16 +387,10 @@ namespace Endeavor {
 		Renderer2D::EndScene();
 	}
 
-	void Scene::DuplicateEntity(Entity entity)
-	{
-		Entity newEntity = CreateEntity(entity.GetName());
-		CopyComponentIfExists(AllComponents{}, newEntity, entity);
-	}
-
 	template<typename T>
 	void Scene::OnComponentAdded(Entity entity, T& component)
 	{
-		//static_assert(false);
+		static_assert(sizeof(T) == 0);
 	}
 
 	template<>

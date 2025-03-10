@@ -1,9 +1,9 @@
 #pragma once
 
-#include <sstream>
-
 #include "Endeavor/Core/Base.h"
 #include "Endeavor/Events/Event.h"
+
+#include <sstream>
 
 namespace Endeavor {
 

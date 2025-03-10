@@ -1,8 +1,8 @@
 #pragma once
-#include <functional>
-
 #include "Endeavor/Debug/Instrumentor.h"
 #include "Endeavor/Core/Base.h"
+
+#include <functional>
 
 namespace Endeavor {
 

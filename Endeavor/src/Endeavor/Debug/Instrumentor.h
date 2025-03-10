@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Endeavor/Core/Log.h"
+
 #include <algorithm>
 #include <chrono>
 #include <fstream>
@@ -9,7 +11,6 @@
 #include <mutex>
 #include <sstream>
 
-#include "Endeavor/Core/Log.h"
 
 namespace Endeavor {
 

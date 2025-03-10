@@ -37,11 +37,6 @@ project "Endeavor-Editor"
 		buildoptions "/utf-8"
 		symbols "on"
 
-		postbuildcommands
-		{
-			"{COPYDIR} \"%{LibraryDir.VulkanSDK_DebugDLL}\" \"%{cfg.targetdir}\""
-		}
-
 	filter "configurations:Release"
 		defines "ED_RELEASE"
 		runtime "Release"

@@ -8,20 +8,19 @@ namespace Endeavor {
 	class EndeavorEditor : public Application
 	{
 	public:
-		EndeavorEditor(ApplicationCommandLineArgs args)
-			: Application("Endeavor Editor", args)
+		EndeavorEditor(const ApplicationSpecification& spec)
+			: Application(spec)
 		{
 			PushLayer(new EditorLayer());
-		}
-
-		~EndeavorEditor()
-		{
-
 		}
 	};
 
 	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new EndeavorEditor(args);
+		ApplicationSpecification spec;
+		spec.Name = "EndeavorEditor";
+		spec.CommandLineArgs = args;
+
+		return new EndeavorEditor(spec);
 	}
 }

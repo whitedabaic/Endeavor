@@ -1,7 +1,8 @@
 #pragma once
 
-#include <memory>
 #include "Endeavor/Renderer/Buffer.h"
+
+#include <memory>
 
 namespace Endeavor {
 	class VertexArray

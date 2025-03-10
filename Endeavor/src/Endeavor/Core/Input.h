@@ -1,7 +1,9 @@
 #pragma once
-#include <glm/glm.hpp>
+
 #include "Endeavor/Core/KeyCodes.h"
 #include "Endeavor/Core/MouseCodes.h"
+
+#include <glm/glm.hpp>
 
 namespace Endeavor {
 

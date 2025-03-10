@@ -1,19 +1,18 @@
 #include "EditorLayer.h"
+#include <Endeavor/Scene/SceneSerializer.h>
+#include "Endeavor/Utils/PlatformUtils.h"
+#include "Endeavor/Math/Math.h"
+
 #include "imgui/imgui.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <Endeavor/Scene/SceneSerializer.h>
-
-#include "Endeavor/Utils/PlatformUtils.h"
 
 #include "ImGuizmo.h"
 
-#include "Endeavor/Math/Math.h"
-
 namespace Endeavor {
 
-	extern const std::filesystem::path g_AssetsPath;
+	extern const std::filesystem::path g_AssetPath;
 
 	EditorLayer::EditorLayer()
 		: Layer("EditorLayer"), m_CameraController(1280.0f / 720.0f)
@@ -38,7 +37,7 @@ namespace Endeavor {
 		m_EditorScene = CreateRef<Scene>();
 		m_ActiveScene = m_EditorScene;
 
-		auto commandLineArgs = Application::Get().GetCommandLineArgs();
+		auto commandLineArgs = Application::Get().GetSpecification().CommandLineArgs;
 		if (commandLineArgs.Count > 1)
 		{
 			auto sceneFilePath = commandLineArgs[1];
@@ -179,19 +178,16 @@ namespace Endeavor {
 			if (ImGui::BeginMenu("File"))
 			{
 				if (ImGui::MenuItem("New", "Ctrl+N"))
-				{
 					NewScene();
-				}
 
 				if (ImGui::MenuItem("Open...", "Ctrl+O"))
-				{
 					OpenScene();
-				}
+
+				if (ImGui::MenuItem("Save", "Ctrl+S"))
+					SaveScene();
 
 				if (ImGui::MenuItem("Save As...", "Ctrl+Shift+S"))
-				{
 					SaveSceneAs();
-				}
 
 				if (ImGui::MenuItem("Exit"))
 				{
@@ -259,7 +255,7 @@ namespace Endeavor {
 			if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("CONTENT_BROWSER_ITEM"))
 			{
 				const wchar_t* path = (const wchar_t*)payload->Data;
-				OpenScene(std::filesystem::path(g_AssetsPath) / path);
+				OpenScene(std::filesystem::path(g_AssetPath) / path);
 			}
 
 			ImGui::EndDragDropTarget();
@@ -372,7 +368,10 @@ namespace Endeavor {
 	void EditorLayer::OnEvent(Event& e)
 	{
 		m_CameraController.OnEvent(e);
-		m_EditorCamera.OnEvent(e);
+		if (m_SceneState == SceneState::Edit)
+		{
+			m_EditorCamera.OnEvent(e);
+		}
 
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<KeyPressedEvent>(ED_BIND_EVENT_FN(EditorLayer::OnKeyPressed));
@@ -381,7 +380,7 @@ namespace Endeavor {
 
 	bool EditorLayer::OnKeyPressed(KeyPressedEvent& e)
 	{
-		if (e.GetRepeatCount() > 0)
+		if (e.IsRepeat())
 			return false;
 
 		bool control = Input::IsKeyPressed(Key::LeftControl) || Input::IsKeyPressed(Key::RightControl);
@@ -513,6 +512,13 @@ namespace Endeavor {
 					Renderer2D::DrawCircle(transform, glm::vec4(0, 1, 0, 1), 0.01f);
 				}
 			}
+		}
+
+		// Draw selected entity outline 
+		if (Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity())
+		{
+			const TransformComponent& transform = selectedEntity.GetComponent<TransformComponent>();
+			Renderer2D::DrawRect(transform.GetTransform(), glm::vec4(1.0f, 0.0f, 0.1f, 1.0f));
 		}
 
 		Renderer2D::EndScene();

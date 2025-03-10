@@ -13,7 +13,8 @@
 class Sandbox : public Endeavor::Application
 {
 public:
-	Sandbox()
+	Sandbox(const Endeavor::ApplicationSpecification& specification)
+		: Endeavor::Application(specification)
 	{
 		PushLayer(new Sandbox2D());
 	}
@@ -24,7 +25,12 @@ public:
 	}
 };
 
-Endeavor::Application* Endeavor::CreateApplication()
+Endeavor::Application* Endeavor::CreateApplication(Endeavor::ApplicationCommandLineArgs args)
 {
-	return new Sandbox();
+	ApplicationSpecification spec;
+	spec.Name = "Sandbox";
+	spec.WorkingDirectory = "../Endeacor-Editor";
+	spec.CommandLineArgs = args;
+
+	return new Sandbox(spec);
 }

@@ -1,8 +1,8 @@
 #pragma once
 
-#include <filesystem>
-
 #include "Endeavor/Renderer/Texture.h"
+
+#include <filesystem>
 
 namespace Endeavor {
 

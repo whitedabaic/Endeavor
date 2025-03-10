@@ -1,5 +1,6 @@
 #include "edpch.h"
 #include "Endeavor/Utils/PlatformUtils.h"
+#include "Endeavor/Core/Application.h"
 
 #include <sstream>
 #include <commdlg.h>
@@ -7,9 +8,12 @@
 #define GLFW_EXPOSE_NATIVE_WIN32
 #include <GLFW/glfw3native.h>
 
-#include "Endeavor/Core/Application.h"
-
 namespace Endeavor {
+
+	float Time::GetTime()
+	{
+		return glfwGetTime();
+	}
 
 	std::string FileDialogs::OpenFile(const char* filter)
 	{

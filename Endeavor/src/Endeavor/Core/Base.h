@@ -1,8 +1,8 @@
 #pragma once
 
-#include <memory>
-
 #include "Endeavor/Core/PlatformDetection.h"
+
+#include <memory>
 
 #ifdef ED_DEBUG
 	#if defined(ED_PLATFORM_WINDOWS)

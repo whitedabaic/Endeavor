@@ -653,6 +653,7 @@
     <ClCompile Include="src\Endeavor\Scene\Scene.cpp" />
     <ClCompile Include="src\Endeavor\Scene\SceneCamera.cpp" />
     <ClCompile Include="src\Endeavor\Scene\SceneSerializer.cpp" />
+    <ClCompile Include="src\Endeavor\Utils\PlatformUtils.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
