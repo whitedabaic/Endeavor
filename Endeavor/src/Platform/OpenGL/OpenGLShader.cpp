@@ -365,7 +365,6 @@ namespace Endeavor {
 		}
 	}
 
-
 	void OpenGLShader::Bind() const
 	{
 		ED_PROFILE_FUNCTION();

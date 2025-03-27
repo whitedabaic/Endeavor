@@ -33,6 +33,15 @@ group "Dependencies"
 	include "Endeavor/vendor/yaml-cpp"
 group ""
 
-include "Endeavor"
-include "Sandbox"
-include "Endeavor-Editor"
+group "Core"
+	include "Endeavor"
+	include "Endeavor-ScriptCore"
+group ""
+
+group "Tools"
+	include "Endeavor-Editor"
+group ""
+
+group "Misc"
+	include "Sandbox"
+group ""
