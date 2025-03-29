@@ -1,46 +1,45 @@
-[20:34:50] [info] ENDEAVOR: Creating window EndeavorEditor (1600, 900)
-[20:34:50] [info] ENDEAVOR:   Vendor: Intel
-[20:34:50] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
-[20:34:50] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
-[20:34:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Quad.glsl
-[20:34:50] [trace] ENDEAVOR:     1 uniform buffers
-[20:34:50] [trace] ENDEAVOR:     0 resources
-[20:34:50] [trace] ENDEAVOR: Uniform buffers:
-[20:34:50] [trace] ENDEAVOR:   _46_48
-[20:34:50] [trace] ENDEAVOR:     Size = 64
-[20:34:50] [trace] ENDEAVOR:     Binding = 0
-[20:34:50] [trace] ENDEAVOR:     Members = 1
-[20:34:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Quad.glsl
-[20:34:50] [trace] ENDEAVOR:     0 uniform buffers
-[20:34:50] [trace] ENDEAVOR:     1 resources
-[20:34:50] [trace] ENDEAVOR: Uniform buffers:
-[20:34:50] [warning] ENDEAVOR: Shader creation took 79.91382 ms
-[20:34:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Circle.glsl
-[20:34:50] [trace] ENDEAVOR:     1 uniform buffers
-[20:34:50] [trace] ENDEAVOR:     0 resources
-[20:34:50] [trace] ENDEAVOR: Uniform buffers:
-[20:34:50] [trace] ENDEAVOR:   _47_49
-[20:34:50] [trace] ENDEAVOR:     Size = 64
-[20:34:50] [trace] ENDEAVOR:     Binding = 0
-[20:34:50] [trace] ENDEAVOR:     Members = 1
-[20:34:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Circle.glsl
-[20:34:50] [trace] ENDEAVOR:     0 uniform buffers
-[20:34:50] [trace] ENDEAVOR:     0 resources
-[20:34:50] [trace] ENDEAVOR: Uniform buffers:
-[20:34:50] [warning] ENDEAVOR: Shader creation took 21.834703 ms
-[20:34:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Line.glsl
-[20:34:50] [trace] ENDEAVOR:     1 uniform buffers
-[20:34:50] [trace] ENDEAVOR:     0 resources
-[20:34:50] [trace] ENDEAVOR: Uniform buffers:
-[20:34:50] [trace] ENDEAVOR:   _30_32
-[20:34:50] [trace] ENDEAVOR:     Size = 64
-[20:34:50] [trace] ENDEAVOR:     Binding = 0
-[20:34:50] [trace] ENDEAVOR:     Members = 1
-[20:34:50] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Line.glsl
-[20:34:50] [trace] ENDEAVOR:     0 uniform buffers
-[20:34:50] [trace] ENDEAVOR:     0 resources
-[20:34:50] [trace] ENDEAVOR: Uniform buffers:
-[20:34:50] [warning] ENDEAVOR: Shader creation took 19.223804 ms
-[20:35:15] [trace] ENDEAVOR: .<Module>
-[20:35:15] [trace] ENDEAVOR: Endeavor.Main
-[20:36:52] [info] ENDEAVOR: Terminating GLFW
+[20:42:58] [info] ENDEAVOR: Creating window EndeavorEditor (1600, 900)
+[20:42:59] [info] ENDEAVOR:   Vendor: Intel
+[20:42:59] [info] ENDEAVOR:   Renderer: Intel(R) Iris(R) Xe Graphics
+[20:42:59] [info] ENDEAVOR:   Version: 4.6.0 - Build 31.0.101.5522
+[20:42:59] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Quad.glsl
+[20:42:59] [trace] ENDEAVOR:     1 uniform buffers
+[20:42:59] [trace] ENDEAVOR:     0 resources
+[20:42:59] [trace] ENDEAVOR: Uniform buffers:
+[20:42:59] [trace] ENDEAVOR:   _46_48
+[20:42:59] [trace] ENDEAVOR:     Size = 64
+[20:42:59] [trace] ENDEAVOR:     Binding = 0
+[20:42:59] [trace] ENDEAVOR:     Members = 1
+[20:42:59] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Quad.glsl
+[20:42:59] [trace] ENDEAVOR:     0 uniform buffers
+[20:42:59] [trace] ENDEAVOR:     1 resources
+[20:42:59] [trace] ENDEAVOR: Uniform buffers:
+[20:42:59] [warning] ENDEAVOR: Shader creation took 47.45841 ms
+[20:42:59] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Circle.glsl
+[20:42:59] [trace] ENDEAVOR:     1 uniform buffers
+[20:42:59] [trace] ENDEAVOR:     0 resources
+[20:42:59] [trace] ENDEAVOR: Uniform buffers:
+[20:42:59] [trace] ENDEAVOR:   _47_49
+[20:42:59] [trace] ENDEAVOR:     Size = 64
+[20:42:59] [trace] ENDEAVOR:     Binding = 0
+[20:42:59] [trace] ENDEAVOR:     Members = 1
+[20:42:59] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Circle.glsl
+[20:42:59] [trace] ENDEAVOR:     0 uniform buffers
+[20:42:59] [trace] ENDEAVOR:     0 resources
+[20:42:59] [trace] ENDEAVOR: Uniform buffers:
+[20:42:59] [warning] ENDEAVOR: Shader creation took 12.641501 ms
+[20:42:59] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Line.glsl
+[20:42:59] [trace] ENDEAVOR:     1 uniform buffers
+[20:42:59] [trace] ENDEAVOR:     0 resources
+[20:42:59] [trace] ENDEAVOR: Uniform buffers:
+[20:42:59] [trace] ENDEAVOR:   _30_32
+[20:42:59] [trace] ENDEAVOR:     Size = 64
+[20:42:59] [trace] ENDEAVOR:     Binding = 0
+[20:42:59] [trace] ENDEAVOR:     Members = 1
+[20:42:59] [trace] ENDEAVOR: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Line.glsl
+[20:42:59] [trace] ENDEAVOR:     0 uniform buffers
+[20:42:59] [trace] ENDEAVOR:     0 resources
+[20:42:59] [trace] ENDEAVOR: Uniform buffers:
+[20:42:59] [warning] ENDEAVOR: Shader creation took 8.834501 ms
+[20:43:03] [warning] ENDEAVOR: Value: vec3(5.000000, 2.500000, 1.000000)
+[20:43:03] [warning] ENDEAVOR: Value: vec3(5.000000, 2.500000, 1.000000)
